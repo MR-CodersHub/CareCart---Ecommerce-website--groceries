@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareCart - Login</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/auth.css" />
+    <link rel="icon" href="assets/images/carecart_logo.png">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  >
+</head>
+<body>
+
+  <!-- ================= AUTH CONTAINER ================= -->
+  <main class="auth-page">
+    <div class="auth-wrapper">
+      <div class="auth-card">
+
+        <!-- LEFT HERO PANEL -->
+        <div class="auth-hero-panel">
+          <img
+            src="assets/images/login.png"
+            alt="CareCart - Fresh Groceries & Care"
+            class="auth-hero-img"
+          />
+        </div>
+
+        <!-- RIGHT FORM PANEL -->
+        <div class="auth-form-panel">
+          <div class="auth-form-container">
+            
+            <!-- BRAND LOGO & NAME -->
+            <a href="index.html" class="auth-brand">
+              <img src="assets/images/carecart_logo.png" alt="CareCart Logo">
+              <span>CareCart</span>
+            </a>
+
+            <h2 class="auth-form-title">Welcome Back</h2>
+            <p class="auth-form-subtitle">Login to access your CareCart portal.</p>
+
+            <!-- ERROR ALERT -->
+            <div id="loginErrorAlert" class="auth-alert alert-error hidden"></div>
+
+            <!-- FORM -->
+            <form id="loginForm" class="auth-form">
+              <!-- EMAIL -->
+              <div class="form-group">
+                <label for="loginEmail">Email Address</label>
+                <input
+                  type="email"
+                  id="loginEmail"
+                  name="email"
+                  placeholder="you@example.com"
+                  required
+                />
+              </div>
+
+              <!-- PASSWORD -->
+              <div class="form-group">
+                <label for="loginPassword">Password</label>
+                <div class="password-input-wrapper">
+                  <input
+                    type="password"
+                    id="loginPassword"
+                    name="password"
+                    placeholder="Enter your password"
+                    required
+                  />
+                  <button type="button" id="togglePasswordBtn" class="password-toggle-btn" aria-label="Toggle password visibility">
+                    <i data-lucide="eye" id="togglePasswordIcon"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- SELECT PORTAL -->
+              <div class="form-group">
+                <label for="loginRole">Select Portal</label>
+                <select id="loginRole" name="role" required>
+                  <option value="">Select your portal</option>
+                  <option value="caregiver">Caregiver Portal</option>
+                  <option value="senior">Senior Citizen Portal</option>
+                  <option value="admin">Admin Portal</option>
+                </select>
+              </div>
+
+              <!-- SUBMIT -->
+              <button type="submit" class="btn-auth-submit">
+                <i data-lucide="log-in"></i>
+                <span>Login</span>
+              </button>
+            </form>
+
+            <!-- REGISTER LINK -->
+            <p class="auth-switch-text">
+              Don't have an account?
+              <a href="register.html" class="auth-switch-link">Create Account</a>
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

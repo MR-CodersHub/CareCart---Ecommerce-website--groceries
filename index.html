@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>CareCart</title>
+
+  <!-- =====================================================
+       GOOGLE FONTS
+  ====================================================== -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet"
+  >
+    <link rel="icon" href="assets/images/carecart_logo.png">
+
+  <!-- =====================================================
+       LUCIDE ICONS
+  ====================================================== -->
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- =====================================================
+       FONT AWESOME
+       Instagram / LinkedIn
+  ====================================================== -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  >
+
+  <!-- =====================================================
+       MAIN CSS
+  ====================================================== -->
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+  <!-- =====================================================
+       NAVBAR
+       JavaScript injects the complete navbar here.
+  ====================================================== -->
+
+  <div id="navbar"></div>
+
+
+  <!-- =====================================================
+       MAIN CONTENT
+  ====================================================== -->
+
+  <main>
+
+    <!-- ===================================================
+         HERO
+    ==================================================== -->
+
+    <section class="hero-section">
+
+      <div
+        class="hero-decoration hero-decoration-right"
+        aria-hidden="true"
+      ></div>
+
+      <div
+        class="hero-decoration hero-decoration-left"
+        aria-hidden="true"
+      ></div>
+
+
+      <div class="hero-container">
+
+        <!-- LEFT -->
+
+        <div class="hero-content">
+
+          <div class="hero-badge">
+
+            <span class="hero-badge-icon">
+              <i data-lucide="heart"></i>
+            </span>
+
+            <span>
+              Designed for Caregivers & Seniors
+            </span>
+
+          </div>
+
+
+          <div class="hero-heading-wrapper">
+
+            <h1 class="hero-heading">
+              Groceries Made Simple
+              <br>
+              <span>for Seniors.</span>
+            </h1>
+
+
+            <div class="hero-support-line">
+
+              <i data-lucide="sparkles"></i>
+
+              <span>
+                Simple ordering. Reliable delivery. Better care.
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <p class="hero-description">
+            Help your loved ones get fresh groceries with
+            effortless ordering, saved repeat lists, and
+            scheduled doorstep delivery.
+          </p>
+
+
+          <div class="hero-buttons">
+
+            <button
+              type="button"
+              class="primary-button"
+              onclick="navigateTo('shop.html')"
+            >
+
+              <i data-lucide="shopping-bag"></i>
+
+              <span>
+                Start an Order
+              </span>
+
+              <i data-lucide="arrow-right"></i>
+
+            </button>
+
+
+            <button
+              type="button"
+              class="secondary-button"
+              onclick="scrollToHowItWorks()"
+            >
+              How It Works
+            </button>
+
+          </div>
+
+
+          <div class="trust-indicators">
+
+            <div class="trust-item">
+
+              <span class="trust-icon">
+                <i data-lucide="check"></i>
+              </span>
+
+              <span>
+                Senior-friendly interface
+              </span>
+
+            </div>
+
+
+            <div class="trust-item">
+
+              <span class="trust-icon">
+                <i data-lucide="calendar"></i>
+              </span>
+
+              <span>
+                Scheduled deliveries
+              </span>
+
+            </div>
+
+
+            <div class="trust-item">
+
+              <span class="trust-icon">
+                <i data-lucide="shield-check"></i>
+              </span>
+
+              <span>
+                Caregiver support
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- RIGHT -->
+
+        <div class="hero-image-column">
+
+          <div class="hero-image-wrapper">
+
+            <div class="hero-image-container">
+
+              <img
+                src="assets/images/heroo_img.png"
+                alt="Caregiver helping a senior woman with groceries"
+              >
+
+              <div class="hero-image-overlay"></div>
+
+            </div>
+
+
+            <div class="delivery-card">
+
+              <div class="delivery-card-header">
+
+                <span class="delivery-label">
+                  Next Delivery
+                </span>
+
+                <span class="scheduled-badge">
+
+                  <i data-lucide="check-circle-2"></i>
+
+                  Scheduled
+
+                </span>
+
+              </div>
+
+
+              <div class="delivery-card-body">
+
+                <div class="delivery-row delivery-main">
+
+                  <i data-lucide="shopping-bag"></i>
+
+                  <span>
+                    Weekly Grocery List
+                  </span>
+
+                </div>
+
+
+                <div class="delivery-row delivery-date">
+
+                  <i data-lucide="calendar"></i>
+
+                  <span>
+                    Monday · 10:00 AM
+                  </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         HOW IT WORKS
+    ==================================================== -->
+
+    <section
+      id="how-it-works"
+      class="how-section"
+    >
+
+      <div class="section-container">
+
+        <div class="section-header">
+
+          <div class="section-badge">
+
+            <i data-lucide="shopping-basket"></i>
+
+            <span>
+              Simple & Reliable
+            </span>
+
+          </div>
+
+
+          <h2>
+            Grocery Delivery Made Easy
+          </h2>
+
+
+          <p>
+            From setting up a loved one's profile to tracking their delivery,
+            CareCart makes every step simple, accessible, and stress-free.
+          </p>
+
+        </div>
+
+
+        <div class="steps-grid">
+
+          <div class="connecting-line"></div>
+
+
+          <!-- STEP 1 -->
+
+          <article class="step-card">
+
+            <div class="step-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=800"
+                alt="Add Senior Details"
+              >
+
+              <div class="image-overlay"></div>
+
+              <div class="step-number">
+                01
+              </div>
+
+            </div>
+
+
+            <div class="step-content">
+
+              <div class="step-icon">
+                <i data-lucide="user-round-plus"></i>
+              </div>
+
+              <h3>
+                Add Senior Details
+              </h3>
+
+              <p>
+                Add your loved one's delivery address and save their dietary preferences for easier ordering.
+              </p>
+
+              <div class="step-indicator">
+
+                <span>
+                  Step 01
+                </span>
+
+                <i data-lucide="arrow-right"></i>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- STEP 2 -->
+
+          <article class="step-card">
+
+            <div class="step-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=800"
+                alt="Choose Groceries"
+              >
+
+              <div class="image-overlay"></div>
+
+              <div class="step-number">
+                02
+              </div>
+
+            </div>
+
+
+            <div class="step-content">
+
+              <div class="step-icon">
+                <i data-lucide="shopping-basket"></i>
+              </div>
+
+              <h3>
+                Choose Groceries
+              </h3>
+
+              <p>
+                Browse a simple grocery list or quickly load the senior's frequently ordered items.
+              </p>
+
+              <div class="step-indicator">
+
+                <span>
+                  Step 02
+                </span>
+
+                <i data-lucide="arrow-right"></i>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- STEP 3 -->
+
+          <article class="step-card">
+
+            <div class="step-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?auto=format&fit=crop&q=80&w=800"
+                alt="Schedule Delivery"
+              >
+
+              <div class="image-overlay"></div>
+
+              <div class="step-number">
+                03
+              </div>
+
+            </div>
+
+
+            <div class="step-content">
+
+              <div class="step-icon">
+                <i data-lucide="calendar-days"></i>
+              </div>
+
+              <h3>
+                Schedule Delivery
+              </h3>
+
+              <p>
+                Choose a one-time delivery or set up a convenient recurring weekly grocery delivery.
+              </p>
+
+              <div class="step-indicator">
+
+                <span>
+                  Step 03
+                </span>
+
+                <i data-lucide="arrow-right"></i>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- STEP 4 -->
+
+          <article class="step-card">
+
+            <div class="step-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800"
+                alt="Track Delivery"
+              >
+
+              <div class="image-overlay"></div>
+
+              <div class="step-number">
+                04
+              </div>
+
+            </div>
+
+
+            <div class="step-content">
+
+              <div class="step-icon">
+                <i data-lucide="truck"></i>
+              </div>
+
+              <h3>
+                Track Delivery
+              </h3>
+
+              <p>
+                Follow the active delivery status and keep track of previous orders and receipts.
+              </p>
+
+              <div class="step-indicator">
+
+                <span>
+                  Step 04
+                </span>
+
+                <i data-lucide="arrow-right"></i>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         SUPPORTED ITEMS
+    ==================================================== -->
+
+    <section
+      id="supported-items"
+      class="supported-section"
+    >
+
+      <div class="section-container">
+
+        <div class="section-header">
+
+          <div class="section-badge">
+
+            <i data-lucide="shopping-basket"></i>
+
+            <span>
+              Everyday Essentials
+            </span>
+
+          </div>
+
+
+          <h2>
+            Everything Your Loved One Needs
+          </h2>
+
+
+          <p>
+            Browse everyday grocery essentials through a simple,
+            senior-friendly shopping experience designed for comfortable
+            and stress-free ordering.
+          </p>
+
+        </div>
+
+
+        <div class="category-grid">
+
+          <!-- FRUITS -->
+
+          <article class="category-card">
+
+            <div class="category-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&q=80&w=800"
+                alt="Fresh Fruits"
+                loading="lazy"
+              >
+
+              <div class="image-overlay"></div>
+
+            </div>
+
+
+            <div class="category-content">
+
+              <div class="category-top">
+
+                <div class="category-icon">
+                  <i data-lucide="apple"></i>
+                </div>
+
+                <i
+                  data-lucide="arrow-right"
+                  class="category-arrow"
+                ></i>
+
+              </div>
+
+
+              <h3>
+                Fresh Fruits
+              </h3>
+
+
+              <p>
+                Fresh and healthy fruits for everyday meals and snacks.
+              </p>
+
+
+              <a
+                href="shop.html"
+                class="browse-link"
+              >
+                Browse Products
+                <i data-lucide="arrow-right"></i>
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- VEGETABLES -->
+
+          <article class="category-card">
+
+            <div class="category-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&q=80&w=800"
+                alt="Fresh Vegetables"
+                loading="lazy"
+              >
+
+              <div class="image-overlay"></div>
+
+            </div>
+
+
+            <div class="category-content">
+
+              <div class="category-top">
+
+                <div class="category-icon">
+                  <i data-lucide="carrot"></i>
+                </div>
+
+                <i
+                  data-lucide="arrow-right"
+                  class="category-arrow"
+                ></i>
+
+              </div>
+
+
+              <h3>
+                Fresh Vegetables
+              </h3>
+
+
+              <p>
+                Everyday vegetables selected for simple and healthy cooking.
+              </p>
+
+
+              <a
+                href="shop.html"
+                class="browse-link"
+              >
+                Browse Products
+                <i data-lucide="arrow-right"></i>
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- DAIRY -->
+
+          <article class="category-card">
+
+            <div class="category-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1628088062854-d1870b4553da?auto=format&fit=crop&q=80&w=800"
+                alt="Dairy and Essentials"
+                loading="lazy"
+              >
+
+              <div class="image-overlay"></div>
+
+            </div>
+
+
+            <div class="category-content">
+
+              <div class="category-top">
+
+                <div class="category-icon">
+                  <i data-lucide="milk"></i>
+                </div>
+
+                <i
+                  data-lucide="arrow-right"
+                  class="category-arrow"
+                ></i>
+
+              </div>
+
+
+              <h3>
+                Dairy & Essentials
+              </h3>
+
+
+              <p>
+                Milk, curd, paneer, eggs and other everyday essentials.
+              </p>
+
+
+              <a
+                href="shop.html"
+                class="browse-link"
+              >
+                Browse Products
+                <i data-lucide="arrow-right"></i>
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- GRAINS -->
+
+          <article class="category-card">
+
+            <div class="category-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&q=80&w=800"
+                alt="Grains and Staples"
+                loading="lazy"
+              >
+
+              <div class="image-overlay"></div>
+
+            </div>
+
+
+            <div class="category-content">
+
+              <div class="category-top">
+
+                <div class="category-icon">
+                  <i data-lucide="wheat"></i>
+                </div>
+
+                <i
+                  data-lucide="arrow-right"
+                  class="category-arrow"
+                ></i>
+
+              </div>
+
+
+              <h3>
+                Grains & Staples
+              </h3>
+
+
+              <p>
+                Rice, flour, cereals and other pantry staples for daily needs.
+              </p>
+
+
+              <a
+                href="shop.html"
+                class="browse-link"
+              >
+                Browse Products
+                <i data-lucide="arrow-right"></i>
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- SNACKS -->
+
+          <article class="category-card">
+
+            <div class="category-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=800"
+                alt="Snacks and Beverages"
+                loading="lazy"
+              >
+
+              <div class="image-overlay"></div>
+
+            </div>
+
+
+            <div class="category-content">
+
+              <div class="category-top">
+
+                <div class="category-icon">
+                  <i data-lucide="coffee"></i>
+                </div>
+
+                <i
+                  data-lucide="arrow-right"
+                  class="category-arrow"
+                ></i>
+
+              </div>
+
+
+              <h3>
+                Snacks & Beverages
+              </h3>
+
+
+              <p>
+                Tea, coffee, healthy snacks and refreshing beverages.
+              </p>
+
+
+              <a
+                href="shop.html"
+                class="browse-link"
+              >
+                Browse Products
+                <i data-lucide="arrow-right"></i>
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- DIET -->
+
+          <article class="category-card">
+
+            <div class="category-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&q=80&w=800"
+                alt="Diet-Friendly Items"
+                loading="lazy"
+              >
+
+              <div class="image-overlay"></div>
+
+            </div>
+
+
+            <div class="category-content">
+
+              <div class="category-top">
+
+                <div class="category-icon">
+                  <i data-lucide="pill"></i>
+                </div>
+
+                <i
+                  data-lucide="arrow-right"
+                  class="category-arrow"
+                ></i>
+
+              </div>
+
+
+              <h3>
+                Diet-Friendly Items
+              </h3>
+
+
+              <p>
+                Suitable grocery choices based on saved dietary preferences.
+              </p>
+
+
+              <a
+                href="shop.html"
+                class="browse-link"
+              >
+                Browse Products
+                <i data-lucide="arrow-right"></i>
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         PRICING
+    ==================================================== -->
+
+    <section
+      id="pricing"
+      class="pricing-section"
+    >
+
+      <div class="section-container">
+
+        <div class="section-header pricing-header">
+
+          <div class="section-badge">
+
+            <i data-lucide="truck"></i>
+
+            <span>
+              Simple Delivery
+            </span>
+
+          </div>
+
+
+          <h2>
+            Simple Pricing, Reliable Delivery
+          </h2>
+
+
+          <p>
+            Everything is designed to make grocery delivery predictable,
+            transparent, and easy for caregivers and seniors.
+          </p>
+
+        </div>
+
+
+        <div class="pricing-grid">
+
+          <div class="delivery-pricing-card">
+
+            <div class="pricing-top">
+
+              <div>
+
+                <div class="pricing-icon">
+                  <i data-lucide="truck"></i>
+                </div>
+
+
+                <h3>
+                  Standard Delivery
+                </h3>
+
+
+                <p>
+                  A simple delivery option for everyday grocery orders.
+                </p>
+
+              </div>
+
+
+              <span class="easy-badge">
+                Easy
+              </span>
+
+            </div>
+
+
+            <div class="price">
+
+              <span>
+                ₹49
+              </span>
+
+              <small>
+                delivery fee
+              </small>
+
+            </div>
+
+
+            <div class="features-list">
+
+              <div class="feature-item">
+                <span class="feature-check">
+                  <i data-lucide="check"></i>
+                </span>
+                <span>No complicated membership</span>
+              </div>
+
+              <div class="feature-item">
+                <span class="feature-check">
+                  <i data-lucide="check"></i>
+                </span>
+                <span>One-time delivery available</span>
+              </div>
+
+              <div class="feature-item">
+                <span class="feature-check">
+                  <i data-lucide="check"></i>
+                </span>
+                <span>Weekly recurring delivery</span>
+              </div>
+
+              <div class="feature-item">
+                <span class="feature-check">
+                  <i data-lucide="check"></i>
+                </span>
+                <span>Clear delivery charges</span>
+              </div>
+
+              <div class="feature-item">
+                <span class="feature-check">
+                  <i data-lucide="check"></i>
+                </span>
+                <span>Caregiver-friendly ordering</span>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="coverage-card">
+
+            <div class="coverage-icon">
+              <i data-lucide="map-pin"></i>
+            </div>
+
+
+            <h3>
+              Delivery Coverage
+            </h3>
+
+
+            <p>
+              We aim to make grocery delivery available to families
+              in supported local areas.
+            </p>
+
+
+            <div class="location-box">
+
+              <div class="location-row">
+
+                <i data-lucide="map-pin"></i>
+
+                <div>
+
+                  <strong>
+                    Check your delivery area
+                  </strong>
+
+                  <span>
+                    Enter a location during checkout to confirm availability.
+                  </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="delivery-options">
+
+              <div class="delivery-option">
+
+                <i data-lucide="calendar-days"></i>
+
+                <h4>
+                  Weekly Delivery
+                </h4>
+
+                <p>
+                  Schedule recurring deliveries for regular grocery needs.
+                </p>
+
+              </div>
+
+
+              <div class="delivery-option">
+
+                <i data-lucide="shield-check"></i>
+
+                <h4>
+                  Reliable Service
+                </h4>
+
+                <p>
+                  Track active deliveries and review previous orders.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         TESTIMONIALS
+    ==================================================== -->
+
+    <section
+      id="testimonials"
+      class="testimonials-section"
+    >
+
+      <div class="section-container">
+
+        <div class="section-header testimonials-header">
+
+          <div class="section-badge">
+
+            <i data-lucide="heart"></i>
+
+            <span>
+              Families We Support
+            </span>
+
+          </div>
+
+
+          <h2>
+            Loved by Caregivers & Seniors
+          </h2>
+
+
+          <p>
+            A simpler grocery experience means less stress
+            for families and more independence for seniors.
+          </p>
+
+        </div>
+
+
+        <div class="testimonial-grid">
+
+          <!-- MEENA -->
+
+          <article class="testimonial-card">
+
+            <div class="testimonial-decoration"></div>
+
+            <div class="quote-icon">
+              <i data-lucide="quote"></i>
+            </div>
+
+
+            <div class="stars">
+
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+
+            </div>
+
+
+            <p class="testimonial-text">
+              "CareCart makes it so much easier to manage groceries for my mother. I can save her usual items and schedule deliveries without having to call every week."
+            </p>
+
+
+            <div class="testimonial-user">
+
+              <div class="profile-image">
+
+                <img
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80"
+                  alt="Meena R. profile"
+                >
+
+              </div>
+
+
+              <div>
+
+                <h3>
+                  Meena R.
+                </h3>
+
+                <p>
+                  Daughter & Caregiver
+                </p>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- RAVI -->
+
+          <article class="testimonial-card">
+
+            <div class="testimonial-decoration"></div>
+
+            <div class="quote-icon">
+              <i data-lucide="quote"></i>
+            </div>
+
+
+            <div class="stars">
+
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+
+            </div>
+
+
+            <p class="testimonial-text">
+              "The simple grocery list is what I like most. My father does not have to deal with a complicated shopping interface, and I can manage everything from my side."
+            </p>
+
+
+            <div class="testimonial-user">
+
+              <div class="profile-image">
+
+                <img
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80"
+                  alt="Ravi K. profile"
+                >
+
+              </div>
+
+
+              <div>
+
+                <h3>
+                  Ravi K.
+                </h3>
+
+                <p>
+                  Son & Caregiver
+                </p>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- LAKSHMI -->
+
+          <article class="testimonial-card">
+
+            <div class="testimonial-decoration"></div>
+
+            <div class="quote-icon">
+              <i data-lucide="quote"></i>
+            </div>
+
+
+            <div class="stars">
+
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+
+            </div>
+
+
+            <p class="testimonial-text">
+              "I like that the items are easy to understand and the delivery details are clear. It gives me confidence that my groceries will arrive when expected."
+            </p>
+
+
+            <div class="testimonial-user">
+
+              <div class="profile-image">
+
+                <img
+                  src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80"
+                  alt="Lakshmi P. profile"
+                >
+
+              </div>
+
+
+              <div>
+
+                <h3>
+                  Lakshmi P.
+                </h3>
+
+                <p>
+                  Senior Customer
+                </p>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+
+        <div class="trust-message">
+
+          <div class="trust-message-icon">
+            <i data-lucide="heart"></i>
+          </div>
+
+          <p>
+            Built with seniors, caregivers, and families in mind.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         HAVE A SPECIFIC GROCERY IN MIND
+         Final section, placed above the footer.
+    ==================================================== -->
+
+    <section class="supported-cta-section">
+
+      <div class="section-container">
+
+        <div class="supported-cta">
+
+          <div class="cta-icon">
+            <i data-lucide="shopping-basket"></i>
+          </div>
+
+
+          <h3>
+            Have a specific grocery in mind?
+          </h3>
+
+
+          <p>
+            Browse our complete grocery collection and create a convenient
+            shopping list for your next delivery.
+          </p>
+
+
+          <a
+            href="shop.html"
+            class="cta-button"
+          >
+            Explore Groceries
+            <i data-lucide="arrow-right"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       JavaScript injects the complete footer here.
+  ====================================================== -->
+
+  <div id="footer"></div>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

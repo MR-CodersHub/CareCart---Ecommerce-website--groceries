@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareCart - Frequently Asked Questions & Help Center</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/legal-pricing.css" />
+    <link rel="icon" href="assets/images/carecart_logo.png">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  >
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <div id="navbar"></div>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="page-wrapper">
+
+    <!-- ================= SECTION 1: HERO & LIVE SEARCH ================= -->
+    <section class="legal-hero">
+      <div class="container">
+        <div class="hero-badge">
+          <i data-lucide="help-circle"></i>
+          <span>Help &amp; Knowledge Base</span>
+        </div>
+        <h1 class="hero-title">
+          How can we <span class="highlight">help you today?</span>
+        </h1>
+        <p class="hero-subtitle">
+          Find fast answers to common questions about senior grocery ordering, caregiver remote management, freshness guarantees, and delivery times.
+        </p>
+
+        <!-- Live Search Bar -->
+        <div class="faq-search-wrap">
+          <i data-lucide="search" class="faq-search-icon"></i>
+          <input
+            type="text"
+            id="faqSearchInput"
+            class="faq-search-input"
+            placeholder="Search questions (e.g., 'voice order', 'delivery time', 'refund', 'caregiver')..."
+          />
+        </div>
+
+        <!-- Filter Categories -->
+        <div class="faq-categories">
+          <button class="faq-category-btn active" data-category="all">All Questions</button>
+          <button class="faq-category-btn" data-category="senior">Senior Ordering</button>
+          <button class="faq-category-btn" data-category="caregiver">Caregiver Portal</button>
+          <button class="faq-category-btn" data-category="delivery">Delivery &amp; Quality</button>
+          <button class="faq-category-btn" data-category="pricing">Pricing &amp; Plans</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 2: SENIOR ASSISTED SHOPPING FAQS ================= -->
+    <section class="content-section" data-section="senior">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-badge">Section 1</p>
+          <h2 class="section-heading">Senior-Friendly &amp; Assisted Ordering</h2>
+          <p class="section-subtext">Everything you need to know about making grocery shopping easy and accessible.</p>
+        </div>
+
+        <div class="faq-accordion-list">
+
+          <div class="faq-item" data-category="senior">
+            <button class="faq-question">
+              <span>How does voice-assisted search work on CareCart?</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              Simply click the microphone icon in the search bar on any product page and speak naturally in English, Tamil, or Hindi (e.g., "Add 1kg brown rice and 2 packets of toned milk"). Our system automatically populates your cart with senior-verified fresh items.
+            </div>
+          </div>
+
+          <div class="faq-item" data-category="senior">
+            <button class="faq-question">
+              <span>Can seniors order over the telephone instead of using the website?</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              Yes! We offer a dedicated Toll-Free Care Hotline (+91 1800 123 4567) operating 7 AM to 9 PM daily. Our patient care coordinators will take your grocery list over the phone, verify dietary restrictions, and confirm your preferred delivery time.
+            </div>
+          </div>
+
+          <div class="faq-item" data-category="senior">
+            <button class="faq-question">
+              <span>What is Easy-Open Senior Packaging?</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              Groceries are packaged in easy-grip, lightweight bags with easy-tear tabs and large, bold expiration labels. Heavy liquid containers (oil, milk) are packed separately with ergonomic handles to prevent strain.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 3: CAREGIVER PORTAL FAQS ================= -->
+    <section class="content-section" data-section="caregiver" style="background: var(--lp-card-bg);">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-badge">Section 2</p>
+          <h2 class="section-heading">Caregiver Portal &amp; Remote Family Care</h2>
+          <p class="section-subtext">How family members can manage grocery needs for seniors from anywhere in the world.</p>
+        </div>
+
+        <div class="faq-accordion-list">
+
+          <div class="faq-item" data-category="caregiver">
+            <button class="faq-question">
+              <span>How do I link my account to my elderly parent's profile?</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              In your Caregiver Dashboard, navigate to "Senior Profile" &gt; "Add Senior Member". Enter your parent's phone number, and a one-time approval SMS will be sent to verify. Once linked, you can manage orders, addresses, and dietary filters together.
+            </div>
+          </div>
+
+          <div class="faq-item" data-category="caregiver">
+            <button class="faq-question">
+              <span>How does the Dietary Restriction &amp; Allergen Blocker work?</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              Caregivers can specify known allergies (e.g., Peanuts, Gluten) and health conditions (Diabetic, Low Sodium) in the Preferences tab. CareCart automatically flags or blocks items in the catalog that conflict with these restrictions, preventing unsafe purchases.
+            </div>
+          </div>
+
+          <div class="faq-item" data-category="caregiver">
+            <button class="faq-question">
+              <span>Can multiple family members share access to the same senior profile?</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              Yes! You can designate Primary and Secondary caregivers (e.g., son, daughter, or home nurse). Each caregiver receives order updates, delivery confirmations, and can review upcoming scheduled baskets.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 4: DELIVERY & QUALITY FAQS ================= -->
+    <section class="content-section" data-section="delivery">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-badge">Section 3</p>
+          <h2 class="section-heading">Delivery, Freshness &amp; Quality Guarantees</h2>
+          <p class="section-subtext">Standards governing doorstep assistance, temperature-controlled delivery, and returns.</p>
+        </div>
+
+        <div class="faq-accordion-list">
+
+          <div class="faq-item" data-category="delivery">
+            <button class="faq-question">
+              <span>Will the delivery driver help carry heavy items inside?</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              Yes! All CareCart delivery personnel are background-checked and instructed to provide Doorstep Unpacking Assistance upon request. Drivers will place heavy bags on the kitchen counter or designated entryway table.
+            </div>
+          </div>
+
+          <div class="faq-item" data-category="delivery">
+            <button class="faq-question">
+              <span>How do you keep milk, dairy, and fruits fresh during transit?</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              We utilize certified insulated cooling totes with food-safe ice gel packs to maintain optimal refrigeration temperatures for milk, curd, paneer, and perishables from our temperature-controlled hub directly to your door.
+            </div>
+          </div>
+
+          <div class="faq-item" data-category="delivery">
+            <button class="faq-question">
+              <span>What happens if an item arrives bruised, spoiled, or missing?</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              We provide a 100% No-Questions-Asked 24-Hour Return Guarantee. Simply tap "Report Issue" in your order details or call support. An instant replacement or immediate refund will be issued to your wallet or bank account.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 5: 24/7 MULTI-CHANNEL SUPPORT HUB ================= -->
+    <section class="content-section" style="background: var(--lp-card-bg);">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-badge">Support Hub</p>
+          <h2 class="section-heading">Still Have Questions? We're Here For You</h2>
+          <p class="section-subtext">Choose your preferred way to speak with our dedicated care team.</p>
+        </div>
+
+        <div class="pricing-grid">
+          
+          <div class="pricing-card" style="text-align: center; align-items: center;">
+            <div style="width: 54px; height: 54px; border-radius: 16px; background: var(--lp-primary-light); color: var(--lp-primary); display: flex; align-items: center; justify-content: center; margin-bottom: 18px;">
+              <i data-lucide="phone-call" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h3 style="font-size: 20px; font-weight: 800; margin-bottom: 8px;">Toll-Free Senior Hotline</h3>
+            <p style="font-size: 14px; color: var(--lp-text-muted); margin-bottom: 16px;">Speak directly with a patient care representative.</p>
+            <a href="tel:18001234567" style="font-size: 20px; font-weight: 900; color: var(--lp-primary); text-decoration: none; margin-bottom: 16px;">+91 1800 123 4567</a>
+            <p style="font-size: 12px; color: var(--lp-text-muted);">Available 7 AM – 9 PM daily</p>
+          </div>
+
+          <div class="pricing-card" style="text-align: center; align-items: center;">
+            <div style="width: 54px; height: 54px; border-radius: 16px; background: var(--lp-accent-light); color: var(--lp-accent); display: flex; align-items: center; justify-content: center; margin-bottom: 18px;">
+              <i data-lucide="message-square" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h3 style="font-size: 20px; font-weight: 800; margin-bottom: 8px;">WhatsApp Care Assist</h3>
+            <p style="font-size: 14px; color: var(--lp-text-muted); margin-bottom: 16px;">Send a grocery list or ask quick questions on chat.</p>
+            <a href="https://wa.me/9118001234567" target="_blank" class="btn-outline-lp" style="width: auto; padding: 10px 24px;">
+              <i data-lucide="send"></i> Chat on WhatsApp
+            </a>
+          </div>
+
+          <div class="pricing-card" style="text-align: center; align-items: center;">
+            <div style="width: 54px; height: 54px; border-radius: 16px; background: var(--lp-blue-light); color: var(--lp-blue); display: flex; align-items: center; justify-content: center; margin-bottom: 18px;">
+              <i data-lucide="mail" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h3 style="font-size: 20px; font-weight: 800; margin-bottom: 8px;">Email Support</h3>
+            <p style="font-size: 14px; color: var(--lp-text-muted); margin-bottom: 16px;">Get in-depth assistance from our care coordinators.</p>
+            <a href="mailto:support@carecart.com" style="font-size: 18px; font-weight: 800; color: var(--lp-blue); text-decoration: none; margin-bottom: 16px;">support@carecart.com</a>
+            <p style="font-size: 12px; color: var(--lp-text-muted);">Response within 2 hours</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <div id="footer"></div>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Accordion Toggle
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isOpen = item.classList.contains('open');
+        
+        // Close other open items
+        document.querySelectorAll('.faq-item').forEach(other => {
+          if (other !== item) other.classList.remove('open');
+        });
+
+        item.classList.toggle('open', !isOpen);
+      });
+    });
+
+    // Category Filter & Search Logic
+    const categoryBtns = document.querySelectorAll('.faq-category-btn');
+    const searchInput = document.getElementById('faqSearchInput');
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    function filterFaqs() {
+      const activeCat = document.querySelector('.faq-category-btn.active')?.dataset.category || 'all';
+      const query = (searchInput?.value || '').toLowerCase().trim();
+
+      faqItems.forEach(item => {
+        const itemCat = item.dataset.category || '';
+        const questionText = item.querySelector('.faq-question span')?.textContent.toLowerCase() || '';
+        const answerText = item.querySelector('.faq-answer')?.textContent.toLowerCase() || '';
+        
+        const matchesCat = (activeCat === 'all' || itemCat === activeCat);
+        const matchesQuery = !query || questionText.includes(query) || answerText.includes(query);
+
+        item.style.display = (matchesCat && matchesQuery) ? 'block' : 'none';
+      });
+    }
+
+    categoryBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        categoryBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        filterFaqs();
+      });
+    });
+
+    if (searchInput) {
+      searchInput.addEventListener('input', filterFaqs);
+    }
+
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  </script>
+</body>
+</html>

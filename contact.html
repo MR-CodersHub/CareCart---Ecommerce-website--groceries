@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareCart - Contact Us</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+    <link rel="icon" href="assets/images/carecart_logo.png">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  >
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <div id="navbar"></div>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="contact-page">
+
+    <!-- ================= SECTION 1 — HERO ================= -->
+    <section class="contact-hero-section">
+      <div class="contact-container">
+        <div class="contact-hero-card">
+          <div class="hero-text-content">
+            <!-- BADGE -->
+            <div class="hero-badge">
+              <i data-lucide="message-circle"></i>
+              <span>WE'RE HERE TO HELP</span>
+            </div>
+
+            <!-- HERO TITLE -->
+            <h1 class="hero-title">
+              Let's make grocery shopping <span class="highlight-green">easier together.</span>
+            </h1>
+
+            <!-- HERO DESCRIPTION -->
+            <p class="hero-desc">
+              Have a question about your order, delivery, products, or caregiver support? Our team is ready to help you and your family.
+            </p>
+          </div>
+
+          <!-- DECORATIVE ICON -->
+          <div class="hero-deco-icon">
+            <i data-lucide="heart-handshake"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 2 — CONTACT INFO ================= -->
+    <section class="contact-info-section">
+      <div class="contact-container">
+        <div class="section-header">
+          <p class="section-label">Contact information</p>
+          <h2 class="section-title">Reach CareCart</h2>
+          <p class="section-desc">
+            Choose the option that works best for you. We're always happy to help.
+          </p>
+        </div>
+
+        <div class="info-cards-grid">
+          <!-- EMAIL -->
+          <div class="contact-card">
+            <div class="card-icon-wrapper bg-green-light">
+              <i data-lucide="mail"></i>
+            </div>
+            <h3>Email Support</h3>
+            <p>Send us your questions and our support team will get back to you.</p>
+            <p class="card-highlight text-green">support@carecart.com</p>
+          </div>
+
+          <!-- PHONE -->
+          <div class="contact-card">
+            <div class="card-icon-wrapper bg-orange-light">
+              <i data-lucide="phone"></i>
+            </div>
+            <h3>Phone Support</h3>
+            <p>Talk directly with our customer support team for assistance.</p>
+            <p class="card-highlight text-orange">+91 1800 123 4567</p>
+          </div>
+
+          <!-- LOCATION -->
+          <div class="contact-card">
+            <div class="card-icon-wrapper bg-indigo-light">
+              <i data-lucide="map-pin"></i>
+            </div>
+            <h3>Our Location</h3>
+            <p>CareCart customer support center serving families and senior citizens.</p>
+            <p class="card-highlight text-indigo">Tamil Nadu, India</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 3 — CONTACT FORM ================= -->
+    <section class="form-section">
+      <div class="contact-container">
+        <div class="form-layout-grid">
+          
+          <!-- LEFT INFO BANNER -->
+          <div class="form-banner-card">
+            <div class="banner-icon-box">
+              <i data-lucide="heart-handshake"></i>
+            </div>
+
+            <h2>How can we help?</h2>
+            <p>
+              Whether you need help with your groceries, delivery schedule, account, or caregiver services, send us a message.
+            </p>
+
+            <div class="help-checklist">
+              <div class="check-item">
+                <i data-lucide="check-circle-2"></i>
+                <span>Order and delivery assistance</span>
+              </div>
+              <div class="check-item">
+                <i data-lucide="check-circle-2"></i>
+                <span>Caregiver account support</span>
+              </div>
+              <div class="check-item">
+                <i data-lucide="check-circle-2"></i>
+                <span>Product questions</span>
+              </div>
+              <div class="check-item">
+                <i data-lucide="check-circle-2"></i>
+                <span>Account assistance</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT FORM CARD -->
+          <div class="contact-card form-card">
+            <div class="form-header">
+              <h2>Send us a message</h2>
+              <p>Fill out the form and we'll be happy to assist you.</p>
+            </div>
+
+            <!-- SUCCESS MESSAGE -->
+            <div id="formSuccessAlert" class="success-alert hidden">
+              <i data-lucide="check-circle-2"></i>
+              <span>Your message has been submitted successfully. We will get back to you shortly!</span>
+            </div>
+
+            <form id="contactForm" class="contact-form">
+              <div class="form-row-2">
+                <div class="input-group">
+                  <label for="name">Your Name</label>
+                  <input type="text" id="name" name="name" placeholder="Enter your name" required />
+                </div>
+                <div class="input-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email" placeholder="you@example.com" required />
+                </div>
+              </div>
+
+              <div class="input-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="How can we help?" required />
+              </div>
+
+              <div class="input-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit">
+                <i data-lucide="send"></i>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 4 — SUPPORT OPTIONS ================= -->
+    <section class="support-options-section">
+      <div class="contact-container">
+        <div class="text-center-header">
+          <p class="section-label">Support options</p>
+          <h2 class="section-title">We're here for every part of your journey</h2>
+        </div>
+
+        <div class="options-grid">
+          <!-- ORDER SUPPORT -->
+          <div class="contact-card">
+            <i data-lucide="shopping-cart" class="option-icon-green"></i>
+            <h3>Order Support</h3>
+            <p>Need help with an existing grocery order? Our team can guide you through it.</p>
+            <a href="cart.html" class="option-link green-link">
+              View My Orders
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- CAREGIVER SUPPORT -->
+          <div class="contact-card">
+            <i data-lucide="heart-handshake" class="option-icon-orange"></i>
+            <h3>Caregiver Support</h3>
+            <p>Family members and caregivers can manage senior grocery needs easily.</p>
+            <a href="caregiver.html" class="option-link orange-link">
+              Open Caregiver Portal
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- GENERAL HELP -->
+          <div class="contact-card">
+            <i data-lucide="help-circle" class="option-icon-indigo"></i>
+            <h3>General Help</h3>
+            <p>Find answers to common questions about CareCart and grocery shopping.</p>
+            <button onclick="document.getElementById('faqDetailsSection').scrollIntoView({behavior:'smooth'})" class="option-link indigo-link">
+              Read FAQs
+              <i data-lucide="arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 5 — REAL MAP & LOCATION ================= -->
+    <section class="location-section">
+      <div class="contact-container">
+        <div class="contact-card location-card">
+          <div class="location-grid">
+            
+            <div class="location-details">
+              <div class="card-icon-wrapper bg-green-light">
+                <i data-lucide="map-pin"></i>
+              </div>
+
+              <h2>Visit our support center</h2>
+              <p>
+                Our support center is designed to help customers and caregivers with account, delivery, and grocery-related questions.
+              </p>
+
+              <div class="location-address-box">
+                <i data-lucide="map-pin" class="pin-icon"></i>
+                <div>
+                  <p class="address-main">CareCart Support Headquarters</p>
+                  <p class="address-sub">Anna Nagar, Chennai, Tamil Nadu - 600040, India</p>
+                </div>
+              </div>
+
+              <div class="contact-quick-links">
+                <a href="tel:+9118001234567" class="quick-link-pill">
+                  <i data-lucide="phone"></i> +91 1800 123 4567
+                </a>
+                <a href="mailto:support@carecart.com" class="quick-link-pill">
+                  <i data-lucide="mail"></i> support@carecart.com
+                </a>
+              </div>
+            </div>
+
+            <!-- REAL GOOGLE MAP EMBED -->
+            <div class="map-embed-wrapper">
+              <iframe
+                title="CareCart Location Map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124410.87789397637!2d80.14115456574768!3d13.082680210086708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 6 — SUPPORT HOURS ================= -->
+    <section class="support-hours-section">
+      <div class="contact-container">
+        <div class="contact-card hours-card">
+          <div class="hours-flex">
+            <div class="hours-info">
+              <div class="card-icon-wrapper bg-orange-light">
+                <i data-lucide="clock-3"></i>
+              </div>
+              <div>
+                <h2>Customer support hours</h2>
+                <p>We're available to help you with your CareCart experience.</p>
+              </div>
+            </div>
+
+            <div class="hours-timings">
+              <div class="timing-col">
+                <p class="day-label">Monday – Saturday</p>
+                <p class="time-label">8:00 AM – 8:00 PM</p>
+              </div>
+              <div class="timing-col">
+                <p class="day-label">Sunday</p>
+                <p class="time-label">9:00 AM – 5:00 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 7 — FAQ + CTA ================= -->
+    <section class="faq-cta-section" id="faqDetailsSection">
+      <div class="contact-container">
+        <div class="faq-cta-grid">
+          
+          <!-- FAQ -->
+          <div class="contact-card faq-card">
+            <div class="faq-card-header">
+              <div class="card-icon-wrapper bg-green-light">
+                <i data-lucide="help-circle"></i>
+              </div>
+              <h2>Frequently asked questions</h2>
+            </div>
+
+            <div class="faq-accordion-list">
+              <details class="faq-details">
+                <summary>How can I track my grocery order?</summary>
+                <p>You can view your active and previous orders from the Orders section of your account with real-time status updates.</p>
+              </details>
+
+              <details class="faq-details">
+                <summary>Can a caregiver manage deliveries?</summary>
+                <p>Yes. Caregivers can manage senior profiles, delivery addresses, preferences, and orders seamlessly through the caregiver portal.</p>
+              </details>
+
+              <details class="faq-details">
+                <summary>Can I schedule grocery deliveries?</summary>
+                <p>CareCart is designed around convenient scheduled and recurring grocery delivery so essentials never run out.</p>
+              </details>
+            </div>
+          </div>
+
+          <!-- SHOP / CAREGIVER CTA -->
+          <div class="cta-banner-card">
+            <div>
+              <div class="cta-icon-pill">
+                <i data-lucide="shopping-cart"></i>
+              </div>
+
+              <h2>Ready to make grocery shopping easier?</h2>
+              <p>Explore our grocery collection or get assistance from your caregiver portal.</p>
+            </div>
+
+            <div class="cta-buttons-row">
+              <a href="shop.html" class="btn-cta-primary">
+                Shop Groceries
+                <i data-lucide="arrow-right"></i>
+              </a>
+
+              <a href="caregiver.html" class="btn-cta-secondary">
+                Caregiver Portal
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <div id="footer"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

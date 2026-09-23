@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareCart - Blog</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/blog.css" />
+    <link rel="icon" href="assets/images/carecart_logo.png">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  >
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <div id="navbar"></div>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="blog-page">
+
+    <!-- ================= SECTION 1 — HERO ================= -->
+    <section class="blog-hero-section">
+      <div class="blog-container">
+        <div class="blog-hero-card">
+          <!-- Orange decoration -->
+          <div class="hero-bg-orb orb-1"></div>
+          <div class="hero-bg-orb orb-2"></div>
+          <div class="hero-bg-orb orb-3"></div>
+
+          <div class="hero-content">
+            <span class="hero-badge">
+              <i data-lucide="book-open"></i>
+              CARECART BLOG
+            </span>
+
+            <h1 class="hero-title">
+              Helpful ideas for <span>better grocery care.</span>
+            </h1>
+
+            <p class="hero-subtitle">
+              Helpful guides, grocery tips and practical advice for seniors, caregivers and families.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 2 — FEATURED ARTICLE ================= -->
+    <section class="featured-section">
+      <div class="blog-container">
+        <div class="featured-card" id="featuredArticleCard">
+          <!-- Featured cover image -->
+          <div class="featured-image-wrapper">
+            <img
+              id="featuredImage"
+              src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=1200&q=85"
+              alt="Featured article"
+            />
+            <div class="featured-overlay"></div>
+            <div class="featured-badge-float">Featured Article</div>
+          </div>
+
+          <!-- Featured content -->
+          <div class="featured-content">
+            <span class="featured-badge-tag">Featured Article</span>
+
+            <h2 class="featured-title" id="featuredTitle">
+              A Simple Guide to Grocery Shopping for Seniors
+            </h2>
+
+            <p class="featured-desc" id="featuredDesc">
+              Learn how seniors can make everyday grocery shopping easier, safer and more organized.
+            </p>
+
+            <div class="featured-meta">
+              <span class="meta-item">
+                <i data-lucide="calendar-days"></i>
+                <span id="featuredDate">Aug 20, 2026</span>
+              </span>
+              <span class="meta-item">
+                <i data-lucide="clock-3"></i>
+                <span id="featuredReadTime">5 min read</span>
+              </span>
+            </div>
+
+            <a id="featuredLink" href="blog-details.html?id=senior-grocery-shopping-guide" class="btn-featured">
+              Read Featured Article
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SEARCH + FILTER ================= -->
+    <section class="filter-section">
+      <div class="blog-container">
+        <div class="filter-flex">
+          <!-- Search input -->
+          <div class="search-box">
+            <i data-lucide="search" class="search-icon"></i>
+            <input
+              type="text"
+              id="blogSearchInput"
+              placeholder="Search articles..."
+            />
+          </div>
+
+          <!-- Category filter buttons -->
+          <div class="category-pills" id="categoryPills">
+            <!-- Buttons injected by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 3 — LATEST ARTICLES ================= -->
+    <section class="latest-section">
+      <div class="blog-container">
+        <div class="section-heading">
+          <span class="sub-label">Latest articles</span>
+          <h2 class="section-title">Tips, guides & insights</h2>
+        </div>
+
+        <div class="blog-grid" id="blogGrid">
+          <!-- Blog items dynamically rendered by JS -->
+        </div>
+
+        <div id="noResults" class="no-results hidden">
+          <i data-lucide="search-x"></i>
+          <h3>No articles found</h3>
+          <p>Try searching for different keywords or select another category.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 4 — CAREGIVER GUIDES ================= -->
+    <section class="caregiver-guides-section">
+      <div class="blog-container">
+        <div class="caregiver-guide-card">
+          <div class="caregiver-grid">
+            <div class="caregiver-text">
+              <span class="sub-label">Caregiver Corner</span>
+              <h2>Helpful resources for family caregivers</h2>
+              <p>
+                Managing groceries for a loved one can be easier with the right planning tools and simple routines.
+              </p>
+              <a href="blog-details.html?id=caregiver-grocery-tips" class="btn-caregiver">
+                Explore Caregiver Guide
+                <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+
+            <div class="caregiver-features-grid">
+              <div class="feature-box">
+                <i data-lucide="users" class="feature-icon"></i>
+                <p>Family Support</p>
+              </div>
+              <div class="feature-box">
+                <i data-lucide="heart-handshake" class="feature-icon"></i>
+                <p>Care Planning</p>
+              </div>
+              <div class="feature-box">
+                <i data-lucide="calendar-days" class="feature-icon"></i>
+                <p>Weekly Planning</p>
+              </div>
+              <div class="feature-box">
+                <i data-lucide="clipboard-list" class="feature-icon"></i>
+                <p>Smart Lists</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 5 — WELLNESS TIPS ================= -->
+    <section class="wellness-section">
+      <div class="blog-container">
+        <div class="wellness-grid">
+          <div class="wellness-card">
+            <div class="wellness-icon">
+              <i data-lucide="apple"></i>
+            </div>
+            <h3>Healthy Choices</h3>
+            <p>Discover simple ways to include nutritious everyday foods in your grocery routine.</p>
+          </div>
+
+          <div class="wellness-card">
+            <div class="wellness-icon">
+              <i data-lucide="leaf"></i>
+            </div>
+            <h3>Fresh Grocery Ideas</h3>
+            <p>Learn how to plan fresh produce and household essentials throughout the week.</p>
+          </div>
+
+          <div class="wellness-card">
+            <div class="wellness-icon">
+              <i data-lucide="lightbulb"></i>
+            </div>
+            <h3>Smart Shopping Tips</h3>
+            <p>Save time by organizing your frequently purchased groceries and planning ahead.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= NEWSLETTER CTA ================= -->
+    <section class="newsletter-section">
+      <div class="blog-container">
+        <div class="newsletter-card">
+          <div class="newsletter-flex">
+            <div>
+              <p class="newsletter-badge">CARE MADE SIMPLE</p>
+              <h2>Learn more. Shop smarter. Care better.</h2>
+              <p class="newsletter-desc">
+                Explore useful grocery guides and practical ideas designed for seniors and their families.
+              </p>
+            </div>
+
+            <a href="shop.html" class="btn-newsletter">
+              Explore Products
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <div id="footer"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/blog.js"></script>
+</body>
+</html>

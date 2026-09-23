@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareCart - Your Cart</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/cart.css" />
+    <link rel="icon" href="assets/images/carecart_logo.png">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  >
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <div id="navbar"></div>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="cart-page">
+    <div class="cart-container">
+
+      <!-- ================= HEADER ================= -->
+      <div class="cart-header">
+        <div class="header-left">
+          <div class="cart-icon-wrapper">
+            <i data-lucide="shopping-cart"></i>
+          </div>
+          <div>
+            <h1>Your Cart</h1>
+            <p id="cartItemsCountText">0 items ready for checkout</p>
+          </div>
+        </div>
+        <a href="shop.html" class="continue-shopping">← Continue Shopping</a>
+      </div>
+
+      <!-- ================= EMPTY CART ================= -->
+      <div id="emptyCart" class="empty-cart hidden">
+        <div class="empty-icon">
+          <i data-lucide="shopping-bag"></i>
+        </div>
+        <h2>Your cart is empty</h2>
+        <p>Looks like you haven't added any groceries yet. Find fresh essentials and add them to your cart.</p>
+        <a href="shop.html" class="btn-primary">
+          Start Shopping <i data-lucide="arrow-right"></i>
+        </a>
+      </div>
+
+      <!-- ================= CART CONTENT ================= -->
+      <div id="cartContent" class="cart-content hidden">
+        
+        <!-- PRODUCTS LIST -->
+        <div class="cart-items" id="cartItemsList">
+          <!-- Products injected by JS -->
+        </div>
+
+        <!-- ORDER SUMMARY -->
+        <aside class="order-summary-container">
+          <div class="order-summary">
+            
+            <div class="summary-header">
+              <h2>Order Summary</h2>
+              <span class="summary-badge" id="summaryItemsCount">0 items</span>
+            </div>
+
+            <!-- SAVINGS -->
+            <div id="savingsBox" class="savings-box hidden">
+              <div class="savings-flex">
+                <i data-lucide="party-popper" class="savings-icon"></i>
+                <span>You're saving!</span>
+              </div>
+              <span class="savings-amount" id="savingsAmount">₹0</span>
+            </div>
+
+            <!-- PRICE DETAILS -->
+            <div class="price-details">
+              <div class="price-row">
+                <span class="price-label">Subtotal</span>
+                <span class="price-value" id="subtotalAmount">₹0</span>
+              </div>
+              <div class="price-row">
+                <span class="price-label">Delivery</span>
+                <span class="price-value delivery-fee" id="deliveryFeeAmount">₹0</span>
+              </div>
+            </div>
+
+            <!-- TOTAL -->
+            <div class="total-section">
+              <div class="total-row">
+                <span class="total-label">Total</span>
+                <span class="total-value" id="totalAmount">₹0</span>
+              </div>
+            </div>
+
+            <button class="checkout-btn" onclick="window.location.href='checkout.html'">
+              Proceed to Checkout <i data-lucide="arrow-right"></i>
+            </button>
+
+            <a href="shop.html" class="continue-btn">Continue Shopping</a>
+
+            <!-- BENEFITS -->
+            <div class="benefits-section">
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <i data-lucide="truck"></i>
+                </div>
+                <div>
+                  <p class="benefit-title">Fresh delivery</p>
+                  <p class="benefit-desc">Delivered safely to your doorstep</p>
+                </div>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <i data-lucide="shield-check"></i>
+                </div>
+                <div>
+                  <p class="benefit-title">Quality guaranteed</p>
+                  <p class="benefit-desc">Carefully selected groceries</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+
+      <!-- ================= EXTRA SECTIONS ================= -->
+      <div id="extraSections" class="hidden">
+        <!-- These would typically be populated dynamically but we'll show static placeholders here as per user's react components -->
+        
+        <!-- CAREGIVER PROMO -->
+        <section class="caregiver-promo-section">
+          <div class="caregiver-promo-card">
+            <div class="caregiver-bg-1"></div>
+            <div class="caregiver-bg-2"></div>
+            
+            <div class="caregiver-content">
+              <div class="caregiver-text-content">
+                <div class="caregiver-icon">
+                  <i data-lucide="heart-pulse"></i>
+                </div>
+                <h2>Need Help Managing Orders?</h2>
+                <p>Are you a caregiver? CareCart offers exclusive tools to help you manage dietary preferences, schedule recurring deliveries, and ensure your loved ones never run out of essentials.</p>
+              </div>
+              <div class="caregiver-btn-container">
+                <a href="caregiver.html" class="caregiver-btn">
+                  Explore Caregiver Tools <i data-lucide="arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="final-cta-section">
+          <div class="final-cta-card">
+            <div class="final-cta-bg-1"></div>
+            <div class="final-cta-bg-2"></div>
+            
+            <div class="final-cta-content">
+              <div class="final-cta-icon">
+                <i data-lucide="sparkles"></i>
+              </div>
+              <h2>Ready to Simplify Grocery Shopping?</h2>
+              <p>Join families everywhere who rely on CareCart for fresh essentials and a hassle-free, caregiver-friendly ordering experience.</p>
+              <div class="final-cta-btn-container">
+                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="final-cta-btn">
+                  Start Browsing Groceries <i data-lucide="arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <div id="footer"></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

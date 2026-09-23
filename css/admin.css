@@ -1,0 +1,17 @@
+/* =========================================================
+   CARECART ADMIN PORTAL
+   Sidebar layout — keeps nav fully visible & properly aligned
+========================================================= */
+
+@media (min-width: 768px) {
+  #adminSidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  #adminSidebar nav {
+    scrollbar-width: thin;
+  }
+}

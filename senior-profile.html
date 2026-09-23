@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareCart - Senior Profile</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/caregiver.css" />
+    <link rel="icon" href="assets/images/carecart_logo.png">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="caregiver-body">
+
+  <!-- ================= MOBILE MENU BUTTON ================= -->
+  <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Open Menu">
+    <i data-lucide="menu"></i>
+  </button>
+
+  <!-- ================= MOBILE OVERLAY ================= -->
+  <div id="mobileOverlay" class="mobile-overlay"></div>
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside id="caregiverSidebar" class="caregiver-sidebar">
+    
+    <!-- LOGO -->
+    <div class="sidebar-logo-container">
+      <a href="index.html" class="sidebar-logo">
+        <img src="assets/images/carecart_logo.png" alt="CareCart Logo" class="sidebar-logo-img">
+        <div>
+          <h1 class="logo-title">CareCart</h1>
+          <p class="logo-subtitle">Caregiver Portal</p>
+        </div>
+      </a>
+      <button id="closeMobileMenuBtn" class="close-mobile-btn">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <!-- CAREGIVER INFO -->
+    <div class="sidebar-info-box">
+      <div class="info-card">
+        <div class="info-icon">
+          <i data-lucide="shield-check"></i>
+        </div>
+        <div class="info-text">
+          <p class="info-name">Caregiver</p>
+          <p class="info-desc">Managing Senior Account</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="sidebar-nav">
+      <p class="nav-heading">Caregiver Menu</p>
+      
+      <a href="caregiver.html" class="nav-item">
+        <i data-lucide="layout-dashboard"></i>
+        <span>Dashboard</span>
+      </a>
+      <a href="senior-profile.html" class="nav-item active">
+        <i data-lucide="user-round"></i>
+        <span>Senior Profile</span>
+      </a>
+      <a href="caregiver-address.html" class="nav-item">
+        <i data-lucide="map-pin"></i>
+        <span>Delivery Address</span>
+      </a>
+      <a href="caregiver-preferences.html" class="nav-item">
+        <i data-lucide="heart-pulse"></i>
+        <span>Dietary Preferences</span>
+      </a>
+      <a href="caregiver-frequently-ordered.html" class="nav-item">
+        <i data-lucide="shopping-bag"></i>
+        <span>Frequently Ordered</span>
+      </a>
+      <a href="caregiver-orders.html" class="nav-item">
+        <i data-lucide="clipboard-list"></i>
+        <span>Orders</span>
+      </a>
+    </nav>
+
+    <!-- THEME CONTROLS -->
+    <div class="sidebar-theme-controls">
+      <div class="theme-card">
+        <p class="nav-heading">Appearance</p>
+        <button id="cgDarkModeToggle" class="theme-btn">
+          <span class="theme-icon">
+            <i data-lucide="moon" id="cgDarkModeIcon"></i>
+          </span>
+          <span id="cgDarkModeText">Dark Mode</span>
+        </button>
+        <button id="cgRtlToggle" class="theme-btn">
+          <span class="theme-icon">
+            <i data-lucide="arrow-left-right" id="cgRtlIcon" class="text-green"></i>
+          </span>
+          <span id="cgRtlText">Switch to RTL</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- LOGOUT -->
+    <div class="sidebar-logout">
+      <button id="cgLogoutBtn" class="logout-btn">
+        <i data-lucide="log-out"></i>
+        <span>Logout</span>
+      </button>
+    </div>
+
+  </aside>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="caregiver-main">
+    
+    <div class="dashboard-container">
+      
+      <!-- HEADER -->
+      <div class="dashboard-header">
+        <div class="header-text-block">
+          <h1 class="header-title">Senior Profile</h1>
+          <p class="header-desc">
+            View and manage the profile details of the senior you are caring for.
+          </p>
+        </div>
+      </div>
+
+      <!-- SENIOR SUMMARY CARD -->
+      <div class="dashboard-card profile-card">
+        <div class="profile-card-content">
+          <div class="profile-info-left">
+            <div class="profile-avatar">
+              <i data-lucide="user-round"></i>
+            </div>
+            <div>
+              <p class="card-sm-title text-green" style="margin-bottom: 0.25rem;">SENIOR FAMILY MEMBER</p>
+              <h2 class="profile-name">Lakshmi Narayanan</h2>
+              <p class="profile-meta">Age 68 &bull; Chennai</p>
+            </div>
+          </div>
+          <button class="btn-outline">
+            Edit Profile <i data-lucide="edit" class="icon-sm"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- 1. EMERGENCY CONTACTS -->
+      <div class="dashboard-card">
+        <div class="flex items-center gap-2 mb-4">
+          <i data-lucide="phone-call" class="text-red icon-sm"></i>
+          <h3 class="card-title">Emergency Contacts</h3>
+        </div>
+        <p class="card-desc mb-4">Crucial contacts available for immediate assistance.</p>
+        
+        <div class="feature-cards-grid">
+          <div class="feature-card feature-pink p-5">
+            <h4 class="font-bold mb-1">Dr. Ramesh</h4>
+            <p class="text-xs text-gray-500 dark:text-slate-400 mb-4">Primary Care Physician</p>
+            <button class="btn-outline w-full justify-center"><i data-lucide="phone" class="icon-sm"></i> Call</button>
+          </div>
+          <div class="feature-card feature-blue p-5">
+            <h4 class="font-bold mb-1">City Hospital Ambulance</h4>
+            <p class="text-xs text-gray-500 dark:text-slate-400 mb-4">Emergency Services</p>
+            <button class="btn-outline w-full justify-center"><i data-lucide="phone" class="icon-sm"></i> Call</button>
+          </div>
+          <div class="feature-card feature-yellow p-5">
+            <h4 class="font-bold mb-1">Anita (Neighbor)</h4>
+            <p class="text-xs text-gray-500 dark:text-slate-400 mb-4">Local Assistance</p>
+            <button class="btn-outline w-full justify-center"><i data-lucide="phone" class="icon-sm"></i> Call</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. HEALTH CONDITIONS -->
+      <div class="dashboard-card">
+        <div class="flex items-center gap-2 mb-4">
+          <i data-lucide="stethoscope" class="text-blue icon-sm"></i>
+          <h3 class="card-title">Health Conditions</h3>
+        </div>
+        <p class="card-desc mb-4">Medical alerts and general health status.</p>
+        
+        <div class="health-list">
+          <div class="health-row">
+            <span style="font-weight: 600;">Blood Type</span>
+            <span class="tag tag-red">O Positive (O+)</span>
+          </div>
+          <div class="health-row">
+            <span style="font-weight: 600;">Chronic Conditions</span>
+            <span class="text-muted">Type 2 Diabetes, Mild Hypertension</span>
+          </div>
+          <div class="health-row">
+            <span style="font-weight: 600;">Mobility</span>
+            <span class="text-muted">Uses a walking cane for long distances.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. ASSIGNED CAREGIVERS -->
+      <div class="dashboard-card">
+        <div class="flex items-center gap-2 mb-4">
+          <i data-lucide="users" class="text-green icon-sm"></i>
+          <h3 class="card-title">Assigned Caregivers</h3>
+        </div>
+        <p class="card-desc mb-4">Family members and aides with access to manage this account.</p>
+        
+        <div class="actions-list">
+          <div class="action-item">
+            <div class="action-icon bg-green-light text-green">
+              <i data-lucide="shield-check"></i>
+            </div>
+            <div class="action-text">
+              <h4>Karthik Narayanan (You)</h4>
+              <p>Primary Caregiver &bull; Son</p>
+            </div>
+          </div>
+          <div class="action-item">
+            <div class="action-icon bg-blue-light text-blue">
+              <i data-lucide="user"></i>
+            </div>
+            <div class="action-text">
+              <h4>Priya Kumar</h4>
+              <p>Secondary Caregiver &bull; Daughter</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. RECENT ACTIVITY LOG -->
+      <div class="dashboard-card">
+        <div class="flex items-center gap-2 mb-4">
+          <i data-lucide="activity" class="text-pink icon-sm"></i>
+          <h3 class="card-title">Recent Activity Log</h3>
+        </div>
+        <p class="card-desc mb-4">Timeline of recent changes and access to this account.</p>
+        
+        <div class="timeline-list">
+          
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <p style="font-weight: 700; margin-bottom: 0.25rem;">Address Updated</p>
+            <p class="text-muted" style="font-size: 0.75rem;">by Karthik Narayanan &bull; 2 hours ago</p>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-dot gray"></div>
+            <p style="font-weight: 700; margin-bottom: 0.25rem;">Dietary Preferences Saved</p>
+            <p class="text-muted" style="font-size: 0.75rem;">by Priya Kumar &bull; 2 days ago</p>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-dot gray"></div>
+            <p style="font-weight: 700; margin-bottom: 0.25rem;">Order #CC1024 Placed</p>
+            <p class="text-muted" style="font-size: 0.75rem;">by Karthik Narayanan &bull; Aug 28, 2026</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/caregiver.js"></script>
+</body>
+</html>

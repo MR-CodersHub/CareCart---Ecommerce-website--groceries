@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareCart - Product Details</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/product-details.css" />
+    <link rel="icon" href="assets/images/carecart_logo.png">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  >
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <div id="navbar"></div>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="product-details-page">
+    <div class="top-nav">
+      <a href="shop.html" class="back-btn">
+        <span class="icon-circle">
+          <i data-lucide="arrow-left"></i>
+        </span>
+        Back to Groceries
+      </a>
+
+      <div class="breadcrumbs">
+        <span>Groceries</span>
+        <i data-lucide="chevron-right"></i>
+        <span id="breadcrumbName" class="font-bold">...</span>
+      </div>
+
+      <button class="cart-btn" onclick="window.location.href='cart.html'">
+        <i data-lucide="shopping-cart"></i>
+      </button>
+    </div>
+
+    <!-- PRODUCT NOT FOUND -->
+    <div id="notFound" class="not-found hidden">
+      <div class="not-found-card">
+        <h2>Product not found</h2>
+        <button onclick="window.location.href='shop.html'" class="btn-primary">Back to Groceries</button>
+      </div>
+    </div>
+
+    <!-- PRODUCT FOUND -->
+    <div id="productFound" class="product-grid-layout hidden">
+      
+      <!-- IMAGE COLUMN -->
+      <div class="product-image-col">
+        <div class="image-wrapper">
+          <div class="bg-circle-1"></div>
+          <div class="bg-circle-2"></div>
+          
+          <div class="discount-badge" id="productDiscountBadge">SAVE ...</div>
+          
+          <button class="like-btn" id="likeBtn">
+            <i data-lucide="heart"></i>
+          </button>
+
+          <div class="image-container">
+            <div class="image-bg-circle"></div>
+            <img id="productImage" src="" alt="" />
+          </div>
+
+          <div class="image-footer">
+            <div class="footer-item">
+              <i data-lucide="shield-check"></i> Quality Checked
+            </div>
+            <div class="footer-item">
+              <i data-lucide="truck"></i> Fast Delivery
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DETAILS COLUMN -->
+      <div class="product-details-col">
+        <div class="details-card">
+          <div class="tags">
+            <span class="category-tag" id="productCategory">...</span>
+            <span class="fresh-pick">• Fresh Pick</span>
+          </div>
+
+          <h1 id="productName" class="product-title">...</h1>
+          <p class="product-subtitle">Fresh, carefully selected and packed for your family.</p>
+
+          <div class="rating-row">
+            <div class="rating-badge">
+              <i data-lucide="star" class="star-icon"></i>
+              <span id="productRating">...</span>
+            </div>
+            <span class="reviews-count" id="productReviews">... customer reviews</span>
+          </div>
+
+          <div class="price-box">
+            <div class="price-flex">
+              <span class="current-price" id="productPrice">...</span>
+              <span class="old-price" id="productOldPrice">...</span>
+              <span class="discount-tag" id="productDiscountText">... OFF</span>
+            </div>
+            <p class="unit-text" id="productUnit">Price for ...</p>
+          </div>
+
+          <div class="description-section">
+            <h3>About this product</h3>
+            <p id="productDescription">...</p>
+          </div>
+
+          <div class="quantity-section">
+            <p>Select Quantity</p>
+            <div class="quantity-controls-wrapper">
+              <div class="quantity-controls">
+                <button id="qtyMinus"><i data-lucide="minus"></i></button>
+                <span id="qtyValue">1</span>
+                <button id="qtyPlus"><i data-lucide="plus"></i></button>
+              </div>
+              <span class="pack-text" id="productPack">... / pack</span>
+            </div>
+          </div>
+
+          <button class="add-to-cart-btn" id="addToCartBtn">
+            <i data-lucide="shopping-cart"></i>
+            <span id="addToCartText">Add 1 Item to Cart</span>
+            <span class="price-total" id="addToCartTotal">...</span>
+          </button>
+
+          <div class="delivery-info">
+            <div class="delivery-icon">
+              <i data-lucide="truck"></i>
+            </div>
+            <div>
+              <p class="delivery-title">Free & fast delivery</p>
+              <p class="delivery-desc">Get your groceries delivered fresh to your doorstep.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ================= FAQ SECTION ================= -->
+    <section class="faq-section hidden" id="faqSection">
+      <div class="faq-hero">
+        <div class="faq-hero-bg"></div>
+        <div class="faq-hero-content">
+          <span class="faq-badge">
+            <i data-lucide="help-circle"></i>
+            HELP CENTER
+          </span>
+          <h1 class="faq-title">
+            Frequently Asked <span>Questions</span>
+          </h1>
+          <p class="faq-subtitle">
+            Find simple answers to common questions about shopping, deliveries, caregivers, accounts, and CareCart.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-list" id="faqList">
+        <!-- FAQ items injected by JS -->
+      </div>
+
+      <div class="faq-cta">
+        <div class="faq-cta-content">
+          <div>
+            <i data-lucide="message-circle" class="cta-icon"></i>
+            <h2>Still have questions?</h2>
+            <p>Our team is here to help make grocery care simpler.</p>
+          </div>
+          <a href="contact.html" class="faq-cta-btn">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DELIVERY SUPPORT SECTION ================= -->
+    <section class="delivery-support-section hidden" id="deliverySupportSection">
+      <div class="support-grid">
+        <!-- Reliable Delivery -->
+        <div class="support-card support-green">
+          <div class="support-icon-wrapper icon-green">
+            <i data-lucide="clock"></i>
+          </div>
+          <h3>Reliable Delivery</h3>
+          <p>
+            We understand that timing is everything. CareCart guarantees that your essentials arrive exactly when they're needed, with live tracking so caregivers can stay informed.
+          </p>
+        </div>
+
+        <!-- Dedicated Support -->
+        <div class="support-card support-orange">
+          <div class="support-icon-wrapper icon-orange">
+            <i data-lucide="shield-alert"></i>
+          </div>
+          <h3>Dedicated Support</h3>
+          <p>
+            Have an issue with an order? Our priority support team is always ready to assist caregivers and family members to resolve issues swiftly.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <div id="footer"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/product-details.js"></script>
+</body>
+</html>

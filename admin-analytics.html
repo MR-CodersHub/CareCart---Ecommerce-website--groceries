@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analytics - CareCart Admin</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Admin Portal CSS -->
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="icon" href="assets/images/carecart_logo.png">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"DM Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#f8faf9] text-gray-900 dark:bg-slate-950 dark:text-white font-sans antialiased min-h-screen flex transition-colors">
+
+  <!-- MOBILE OVERLAY -->
+  <div id="mobileOverlay" class="fixed inset-0 z-40 hidden bg-gray-900/50 backdrop-blur-sm transition-opacity md:hidden"></div>
+
+  <!-- ================= ADMIN SIDEBAR ================= -->
+  <aside id="adminSidebar" class="admin-sidebar w-64 bg-white dark:bg-slate-900 border-r border-gray-200 dark:border-slate-800 flex-shrink-0 hidden md:flex flex-col z-50">
+    <!-- LOGO -->
+    <div class="h-16 flex items-center justify-between px-6 border-b border-gray-200 dark:border-slate-800">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <img src="assets/images/carecart_logo.png" alt="CareCart Logo" class="h-8 w-auto object-contain">
+        <span class="text-lg font-bold text-[#34745F] dark:text-white flex items-center gap-1.5 font-serif">CareCart <span class="text-[11px] font-sans font-semibold text-emerald-700 dark:text-emerald-400 bg-emerald-100/70 dark:bg-emerald-950/80 px-1.5 py-0.5 rounded">Admin</span></span>
+      </a>
+      <button id="closeMobileMenuBtn" class="p-1 text-gray-500 hover:text-gray-700 md:hidden dark:text-slate-400 dark:hover:text-white">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="flex-1 overflow-y-auto py-5 px-3">
+      <p class="px-3 mb-3 text-[10px] font-bold uppercase tracking-widest text-gray-400 dark:text-slate-500">Main Menu</p>
+      <div class="space-y-1">
+        <a href="admin.html" class="flex items-center gap-3 rounded-xl px-3 py-2 text-sm font-medium text-gray-600 transition hover:bg-gray-50 hover:text-gray-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white">
+          <i data-lucide="layout-dashboard" class="w-5 h-5"></i> <span>Dashboard</span>
+        </a>
+        <a href="admin-orders.html" class="flex items-center gap-3 rounded-xl px-3 py-2 text-sm font-medium text-gray-600 transition hover:bg-gray-50 hover:text-gray-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white">
+          <i data-lucide="shopping-bag" class="w-5 h-5"></i> <span>Orders</span>
+        </a>
+        <a href="admin-products.html" class="flex items-center gap-3 rounded-xl px-3 py-2 text-sm font-medium text-gray-600 transition hover:bg-gray-50 hover:text-gray-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white">
+          <i data-lucide="package" class="w-5 h-5"></i> <span>Products</span>
+        </a>
+        <a href="admin-customers.html" class="flex items-center gap-3 rounded-xl px-3 py-2 text-sm font-medium text-gray-600 transition hover:bg-gray-50 hover:text-gray-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white">
+          <i data-lucide="users" class="w-5 h-5"></i> <span>Customers</span>
+        </a>
+        <a href="admin-analytics.html" class="flex items-center gap-3 rounded-xl bg-[#eef8f3] px-3 py-2 text-sm font-bold text-[#34745F] dark:bg-emerald-950 dark:text-emerald-400">
+          <i data-lucide="bar-chart-3" class="w-5 h-5"></i> <span>Analytics</span>
+        </a>
+      </div>
+
+      <p class="px-3 mt-6 mb-3 text-[10px] font-bold uppercase tracking-widest text-gray-400 dark:text-slate-500">Management</p>
+      <div class="space-y-1">
+        <a href="admin-categories.html" class="flex items-center gap-3 rounded-xl px-3 py-2 text-sm font-medium text-gray-600 transition hover:bg-gray-50 hover:text-gray-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white">
+          <i data-lucide="layers-3" class="w-5 h-5"></i> <span>Categories</span>
+        </a>
+        <a href="admin-delivery.html" class="flex items-center gap-3 rounded-xl px-3 py-2 text-sm font-medium text-gray-600 transition hover:bg-gray-50 hover:text-gray-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white">
+          <i data-lucide="truck" class="w-5 h-5"></i> <span>Delivery</span>
+        </a>
+        <a href="admin-reports.html" class="flex items-center gap-3 rounded-xl px-3 py-2 text-sm font-medium text-gray-600 transition hover:bg-gray-50 hover:text-gray-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white">
+          <i data-lucide="file-chart-column" class="w-5 h-5"></i> <span>Reports</span>
+        </a>
+      </div>
+
+      <!-- THEME & RTL CONTROLS -->
+      <p class="px-3 mt-6 mb-3 text-[10px] font-bold uppercase tracking-widest text-gray-400 dark:text-slate-500">Preferences</p>
+      <div class="space-y-1.5 px-1">
+        <button id="adminThemeToggle" class="w-full flex items-center justify-between rounded-xl border border-gray-200 bg-gray-50 px-3 py-2 text-xs font-semibold text-gray-700 transition hover:bg-gray-100 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-750">
+          <span class="flex items-center gap-2">
+            <i data-lucide="moon" id="adminThemeIcon" class="w-4 h-4 text-[#34745F] dark:text-emerald-400"></i>
+            <span id="adminThemeText">Dark Mode</span>
+          </span>
+          <span class="text-[10px] font-bold text-gray-400">Theme</span>
+        </button>
+
+        <button id="adminRtlToggle" class="w-full flex items-center justify-between rounded-xl border border-gray-200 bg-gray-50 px-3 py-2 text-xs font-semibold text-gray-700 transition hover:bg-gray-100 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-750">
+          <span class="flex items-center gap-2">
+            <i data-lucide="arrow-left-right" class="w-4 h-4 text-[#34745F] dark:text-emerald-400"></i>
+            <span id="adminRtlText">Switch to RTL</span>
+          </span>
+          <span class="text-[10px] font-bold text-gray-400">RTL</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- BOTTOM -->
+    <div class="p-4 border-t border-gray-200 dark:border-slate-800">
+      <a href="admin-settings.html" class="flex items-center gap-3 rounded-xl px-3 py-2 text-sm font-medium text-gray-600 transition hover:bg-gray-50 hover:text-gray-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white">
+        <i data-lucide="settings" class="w-5 h-5"></i> <span>Settings</span>
+      </a>
+      <a href="login.html" id="adminLogoutBtn" class="mt-1 flex items-center gap-3 rounded-xl px-3 py-2 text-sm font-medium text-red-600 transition hover:bg-red-50 dark:text-red-400 dark:hover:bg-red-950">
+        <i data-lucide="log-out" class="w-5 h-5"></i> <span>Logout</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="flex-1 w-full flex flex-col min-w-0 overflow-hidden">
+    <!-- MOBILE HEADER -->
+    <header class="h-16 flex items-center justify-between px-4 border-b border-gray-200 bg-white md:hidden dark:bg-slate-900 dark:border-slate-800">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <img src="assets/images/carecart_logo.png" alt="CareCart Logo" class="h-8 w-auto object-contain">
+        <span class="text-lg font-bold text-[#34745F] dark:text-white flex items-center gap-1.5 font-serif">CareCart <span class="text-[11px] font-sans font-semibold text-emerald-700 dark:text-emerald-400 bg-emerald-100/70 dark:bg-emerald-950/80 px-1.5 py-0.5 rounded">Admin</span></span>
+      </a>
+      <button id="mobileMenuBtn" class="p-2 text-gray-600 dark:text-slate-400">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </header>
+
+    <!-- DASHBOARD SCROLL AREA -->
+    <div class="flex-1 overflow-auto p-4 sm:p-6 lg:p-8">
+      
+      <!-- HEADER -->
+      <div class="mb-7 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <h1 class="text-2xl font-extrabold tracking-tight sm:text-3xl">Analytics & Insights</h1>
+          <p class="mt-1 text-sm text-gray-500 dark:text-slate-500">Track real-time sales metrics, revenue, and senior purchasing trends.</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <select class="rounded-xl border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm outline-none dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200">
+            <option>Last 30 Days</option>
+            <option>This Quarter</option>
+            <option>This Year</option>
+          </select>
+          <button class="flex items-center gap-2 rounded-xl bg-[#34745F] px-4 py-2 text-sm font-bold text-white shadow-sm transition hover:bg-[#28634F] dark:bg-emerald-600 dark:hover:bg-emerald-500">
+            <i data-lucide="download" class="w-4 h-4"></i> Download PDF
+          </button>
+        </div>
+      </div>
+
+      <!-- KEY METRICS -->
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+          <p class="text-xs font-semibold text-gray-500 dark:text-slate-400 uppercase tracking-wider">Average Order Value</p>
+          <h3 class="mt-2 text-2xl font-extrabold text-gray-900 dark:text-white">₹865.40</h3>
+          <p class="mt-2 flex items-center text-xs font-semibold text-emerald-600 dark:text-emerald-400">
+            <i data-lucide="trending-up" class="w-3.5 h-3.5 mr-1"></i> +5.4% from last month
+          </p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+          <p class="text-xs font-semibold text-gray-500 dark:text-slate-400 uppercase tracking-wider">Conversion Rate</p>
+          <h3 class="mt-2 text-2xl font-extrabold text-gray-900 dark:text-white">4.82%</h3>
+          <p class="mt-2 flex items-center text-xs font-semibold text-emerald-600 dark:text-emerald-400">
+            <i data-lucide="trending-up" class="w-3.5 h-3.5 mr-1"></i> +0.8% increase
+          </p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+          <p class="text-xs font-semibold text-gray-500 dark:text-slate-400 uppercase tracking-wider">Repeat Customer Rate</p>
+          <h3 class="mt-2 text-2xl font-extrabold text-gray-900 dark:text-white">78.5%</h3>
+          <p class="mt-2 flex items-center text-xs font-semibold text-emerald-600 dark:text-emerald-400">
+            <i data-lucide="trending-up" class="w-3.5 h-3.5 mr-1"></i> High Caregiver retention
+          </p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+          <p class="text-xs font-semibold text-gray-500 dark:text-slate-400 uppercase tracking-wider">Total Deliveries</p>
+          <h3 class="mt-2 text-2xl font-extrabold text-gray-900 dark:text-white">1,180</h3>
+          <p class="mt-2 flex items-center text-xs font-semibold text-blue-600 dark:text-blue-400">
+            <i data-lucide="check-circle" class="w-3.5 h-3.5 mr-1"></i> 99.2% on-time delivery
+          </p>
+        </div>
+      </div>
+
+      <!-- ANALYTICS CHARTS GRID -->
+      <div class="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <!-- Revenue Growth Graph -->
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <h2 class="text-lg font-bold">Monthly Revenue Trend</h2>
+              <p class="text-xs text-gray-500 dark:text-slate-400">Gross revenue generated across all categories</p>
+            </div>
+            <span class="rounded-lg bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-700 dark:bg-emerald-950 dark:text-emerald-400">+18.2% YoY</span>
+          </div>
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between text-xs font-medium mb-1">
+                <span>Fresh Fruits & Vegetables</span>
+                <span class="font-bold">₹18,450 (38%)</span>
+              </div>
+              <div class="h-2.5 w-full bg-gray-100 rounded-full dark:bg-slate-800 overflow-hidden">
+                <div class="h-full bg-[#34745F] rounded-full" style="width: 38%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs font-medium mb-1">
+                <span>Dairy & Breakfast</span>
+                <span class="font-bold">₹14,200 (29%)</span>
+              </div>
+              <div class="h-2.5 w-full bg-gray-100 rounded-full dark:bg-slate-800 overflow-hidden">
+                <div class="h-full bg-blue-500 rounded-full" style="width: 29%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs font-medium mb-1">
+                <span>Health & Wellness</span>
+                <span class="font-bold">₹10,500 (21%)</span>
+              </div>
+              <div class="h-2.5 w-full bg-gray-100 rounded-full dark:bg-slate-800 overflow-hidden">
+                <div class="h-full bg-purple-500 rounded-full" style="width: 21%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs font-medium mb-1">
+                <span>Staples & Grains</span>
+                <span class="font-bold">₹5,500 (12%)</span>
+              </div>
+              <div class="h-2.5 w-full bg-gray-100 rounded-full dark:bg-slate-800 overflow-hidden">
+                <div class="h-full bg-amber-500 rounded-full" style="width: 12%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Audience Demographics -->
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <h2 class="text-lg font-bold">User Ordering Distribution</h2>
+              <p class="text-xs text-gray-500 dark:text-slate-400">Orders placed directly vs caregiver-assisted</p>
+            </div>
+            <i data-lucide="pie-chart" class="w-5 h-5 text-gray-400"></i>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4 pt-2">
+            <div class="rounded-xl border border-gray-100 bg-gray-50 p-4 text-center dark:border-slate-800 dark:bg-slate-800/60">
+              <div class="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-purple-100 text-purple-600 dark:bg-purple-950 dark:text-purple-400 mb-2">
+                <i data-lucide="heart" class="w-5 h-5"></i>
+              </div>
+              <p class="text-xs font-medium text-gray-500 dark:text-slate-400">Senior Direct</p>
+              <h4 class="text-xl font-bold mt-1 text-gray-900 dark:text-white">41.2%</h4>
+              <p class="text-[10px] text-gray-400 mt-1">High-contrast / Big Font</p>
+            </div>
+
+            <div class="rounded-xl border border-gray-100 bg-gray-50 p-4 text-center dark:border-slate-800 dark:bg-slate-800/60">
+              <div class="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-blue-100 text-blue-600 dark:bg-blue-950 dark:text-blue-400 mb-2">
+                <i data-lucide="users" class="w-5 h-5"></i>
+              </div>
+              <p class="text-xs font-medium text-gray-500 dark:text-slate-400">Caregiver Assisted</p>
+              <h4 class="text-xl font-bold mt-1 text-gray-900 dark:text-white">58.8%</h4>
+              <p class="text-[10px] text-gray-400 mt-1">Auto-reorder & Subscriptions</p>
+            </div>
+          </div>
+
+          <div class="mt-6 rounded-xl bg-[#eef8f3] p-4 dark:bg-emerald-950/40 border border-emerald-100 dark:border-emerald-900/50">
+            <div class="flex items-center gap-3">
+              <i data-lucide="sparkles" class="w-5 h-5 text-[#34745F] dark:text-emerald-400"></i>
+              <p class="text-xs text-gray-700 dark:text-emerald-200">
+                <strong>Insight:</strong> Frequently ordered essentials like Organic Milk & Fuji Apples convert 4x faster via Caregiver portal.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>

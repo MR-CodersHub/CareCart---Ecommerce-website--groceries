@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareCart - Order Placed Successfully</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/order-success.css" />
+    <link rel="icon" href="assets/images/carecart_logo.png">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  >
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <div id="navbar"></div>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="order-success-page">
+    <div class="order-success-container">
+
+      <div class="order-success-card">
+
+        <!-- SUCCESS ICON -->
+        <div class="success-icon-wrapper">
+          <i data-lucide="check-circle" class="success-icon"></i>
+        </div>
+
+        <!-- TITLE & SUBTITLE -->
+        <h1 class="success-title">Order Placed Successfully!</h1>
+        <p class="success-desc">
+          Thank you for shopping with us. Your grocery order has been successfully placed and will be delivered fresh to your doorstep.
+        </p>
+
+        <!-- ORDER ID CARD -->
+        <div class="order-id-card">
+          <p class="order-id-label">Order ID</p>
+          <p class="order-id-val" id="orderIdText">#CARE-2026-0828</p>
+          <div class="order-delivery-eta">
+            <i data-lucide="truck"></i>
+            <span>Expected delivery within 24 hours</span>
+          </div>
+        </div>
+
+        <!-- INFO GRID -->
+        <div class="order-info-grid">
+          <div class="info-box">
+            <p class="info-label">Status</p>
+            <p class="info-val status-val">Confirmed</p>
+          </div>
+
+          <div class="info-box">
+            <p class="info-label">Payment</p>
+            <p class="info-val" id="paymentMethodText">Cash on Delivery</p>
+          </div>
+
+          <div class="info-box">
+            <p class="info-label">Delivery</p>
+            <p class="info-val">Within 24 hrs</p>
+          </div>
+        </div>
+
+        <!-- BUTTONS -->
+        <div class="success-actions">
+          <a href="shop.html" class="btn-shop">
+            <i data-lucide="shopping-bag"></i>
+            Continue Shopping
+          </a>
+
+          <a href="index.html" class="btn-home">
+            Back to Home
+            <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- FOOTER MESSAGE -->
+        <p class="success-footer-msg">
+          We’ll make sure your groceries reach you fresh and safely.
+        </p>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <div id="footer"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/order-success.js"></script>
+</body>
+</html>

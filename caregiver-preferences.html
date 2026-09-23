@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareCart - Dietary Preferences</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/caregiver.css" />
+    <link rel="icon" href="assets/images/carecart_logo.png">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="caregiver-body">
+
+  <!-- ================= MOBILE MENU BUTTON ================= -->
+  <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Open Menu">
+    <i data-lucide="menu"></i>
+  </button>
+
+  <!-- ================= MOBILE OVERLAY ================= -->
+  <div id="mobileOverlay" class="mobile-overlay"></div>
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside id="caregiverSidebar" class="caregiver-sidebar">
+    
+    <!-- LOGO -->
+    <div class="sidebar-logo-container">
+      <a href="index.html" class="sidebar-logo">
+        <img src="assets/images/carecart_logo.png" alt="CareCart Logo" class="sidebar-logo-img">
+        <div>
+          <h1 class="logo-title">CareCart</h1>
+          <p class="logo-subtitle">Caregiver Portal</p>
+        </div>
+      </a>
+      <button id="closeMobileMenuBtn" class="close-mobile-btn">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <!-- CAREGIVER INFO -->
+    <div class="sidebar-info-box">
+      <div class="info-card">
+        <div class="info-icon">
+          <i data-lucide="shield-check"></i>
+        </div>
+        <div class="info-text">
+          <p class="info-name">Caregiver</p>
+          <p class="info-desc">Managing Senior Account</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="sidebar-nav">
+      <p class="nav-heading">Caregiver Menu</p>
+      
+      <a href="caregiver.html" class="nav-item">
+        <i data-lucide="layout-dashboard"></i>
+        <span>Dashboard</span>
+      </a>
+      <a href="senior-profile.html" class="nav-item">
+        <i data-lucide="user-round"></i>
+        <span>Senior Profile</span>
+      </a>
+      <a href="caregiver-address.html" class="nav-item">
+        <i data-lucide="map-pin"></i>
+        <span>Delivery Address</span>
+      </a>
+      <a href="caregiver-preferences.html" class="nav-item active">
+        <i data-lucide="heart-pulse"></i>
+        <span>Dietary Preferences</span>
+      </a>
+      <a href="caregiver-frequently-ordered.html" class="nav-item">
+        <i data-lucide="shopping-bag"></i>
+        <span>Frequently Ordered</span>
+      </a>
+      <a href="caregiver-orders.html" class="nav-item">
+        <i data-lucide="clipboard-list"></i>
+        <span>Orders</span>
+      </a>
+    </nav>
+
+    <!-- THEME CONTROLS -->
+    <div class="sidebar-theme-controls">
+      <div class="theme-card">
+        <p class="nav-heading">Appearance</p>
+        <button id="cgDarkModeToggle" class="theme-btn">
+          <span class="theme-icon">
+            <i data-lucide="moon" id="cgDarkModeIcon"></i>
+          </span>
+          <span id="cgDarkModeText">Dark Mode</span>
+        </button>
+        <button id="cgRtlToggle" class="theme-btn">
+          <span class="theme-icon">
+            <i data-lucide="arrow-left-right" id="cgRtlIcon" class="text-green"></i>
+          </span>
+          <span id="cgRtlText">Switch to RTL</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- LOGOUT -->
+    <div class="sidebar-logout">
+      <button id="cgLogoutBtn" class="logout-btn">
+        <i data-lucide="log-out"></i>
+        <span>Logout</span>
+      </button>
+    </div>
+
+  </aside>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="caregiver-main">
+    <div class="dashboard-container">
+      
+      <!-- HEADER -->
+      <div class="dashboard-header">
+        <div class="header-text-block">
+          <h1 class="header-title">Dietary Preferences</h1>
+          <p class="header-desc">
+            Keep your senior's food preferences and dietary needs up to date to ensure safe grocery shopping.
+          </p>
+        </div>
+        <button class="btn-shop">
+          <i data-lucide="save"></i>
+          Save Changes
+        </button>
+      </div>
+
+      <!-- PREFERENCES CONTENT -->
+      <div class="pref-grid">
+        
+        <div class="dashboard-card">
+          <h3 class="card-title">Allergies & Restrictions</h3>
+          <p class="card-desc" style="margin-bottom: 1.5rem;">Select any known allergies to automatically filter out unsafe products.</p>
+          
+          <div class="tags-container">
+            <span class="tag tag-red"><i data-lucide="x" class="icon-sm"></i> Peanuts</span>
+            <span class="tag tag-red"><i data-lucide="x" class="icon-sm"></i> Shellfish</span>
+            <span class="tag tag-outline">Dairy</span>
+            <span class="tag tag-outline">Gluten</span>
+            <span class="tag tag-outline">Soy</span>
+            <span class="tag tag-outline">Eggs</span>
+          </div>
+        </div>
+
+        <div class="dashboard-card">
+          <h3 class="card-title">Dietary Needs</h3>
+          <p class="card-desc" style="margin-bottom: 1.5rem;">Select health-based dietary goals.</p>
+          
+          <div class="tags-container">
+            <span class="tag tag-green"><i data-lucide="check" class="icon-sm"></i> Diabetic Friendly</span>
+            <span class="tag tag-green"><i data-lucide="check" class="icon-sm"></i> Low Sodium</span>
+            <span class="tag tag-outline">Vegetarian</span>
+            <span class="tag tag-outline">Vegan</span>
+            <span class="tag tag-outline">Heart Healthy</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="dashboard-card">
+        <h3 class="card-title">Caregiver Notes</h3>
+        <p class="card-desc" style="margin-bottom: 1rem;">Add any specific instructions for grocery substitutions or packaging preferences.</p>
+        <textarea class="pref-textarea" placeholder="e.g. Ensure all milk cartons have easy-to-open caps. Prefer fresh spinach over frozen..."></textarea>
+      </div>
+
+      <!-- 1. MEAL SCHEDULE -->
+      <div class="dashboard-card" style="margin-top: 1.5rem;">
+        <div class="flex items-center gap-2 mb-4">
+          <i data-lucide="calendar" class="text-blue icon-sm"></i>
+          <h3 class="card-title">Meal Schedule Planner</h3>
+        </div>
+        <p class="card-desc mb-4">Plan and manage daily meal timings.</p>
+        
+        <div class="flex flex-col gap-3">
+          <div class="flex justify-between items-center pb-2 border-b border-gray-100 dark:border-slate-800">
+            <span class="font-semibold">Breakfast</span>
+            <span class="tag tag-outline">08:00 AM</span>
+          </div>
+          <div class="flex justify-between items-center pb-2 border-b border-gray-100 dark:border-slate-800">
+            <span class="font-semibold">Lunch</span>
+            <span class="tag tag-outline">01:00 PM</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="font-semibold">Dinner</span>
+            <span class="tag tag-outline">07:30 PM</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. PROHIBITED INGREDIENTS -->
+      <div class="dashboard-card">
+        <div class="flex items-center gap-2 mb-4">
+          <i data-lucide="ban" class="text-red icon-sm"></i>
+          <h3 class="card-title">Prohibited Ingredients</h3>
+        </div>
+        <p class="card-desc mb-4">A strict blacklist of items that should never be ordered.</p>
+        
+        <div class="tags-container">
+          <span class="tag tag-red">Artificial Sweeteners</span>
+          <span class="tag tag-red">MSG</span>
+          <span class="tag tag-red">High Fructose Corn Syrup</span>
+        </div>
+      </div>
+
+      <!-- 3. FAVORITE BRANDS -->
+      <div class="dashboard-card">
+        <div class="flex items-center gap-2 mb-4">
+          <i data-lucide="star" class="text-yellow icon-sm"></i>
+          <h3 class="card-title">Favorite Brands</h3>
+        </div>
+        <p class="card-desc mb-4">Preferred brands for staple groceries.</p>
+        
+        <div class="flex gap-3 flex-wrap">
+          <span class="tag tag-outline">Aashirvaad (Atta)</span>
+          <span class="tag tag-outline">Amul (Dairy)</span>
+          <span class="tag tag-outline">Tata (Salt/Tea)</span>
+        </div>
+      </div>
+
+      <!-- 4. NUTRITION GOALS -->
+      <div class="dashboard-card">
+        <div class="flex items-center gap-2 mb-4">
+          <i data-lucide="target" class="text-green icon-sm"></i>
+          <h3 class="card-title">Nutrition Goals</h3>
+        </div>
+        <p class="card-desc mb-4">Target daily intake to maintain a healthy diet.</p>
+        
+        <div class="grid grid-cols-2 gap-4">
+          <div class="p-4 rounded-2xl text-center bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-800">
+            <p class="text-xs text-gray-500 dark:text-slate-400 font-bold uppercase">Calorie Goal</p>
+            <p class="text-2xl font-extrabold text-gray-900 dark:text-white mt-1">1800 kcal</p>
+          </div>
+          <div class="p-4 rounded-2xl text-center bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-800">
+            <p class="text-xs text-gray-500 dark:text-slate-400 font-bold uppercase">Water Intake</p>
+            <p class="text-2xl font-extrabold text-blue-600 dark:text-blue-400 mt-1">2.5 Liters</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/caregiver.js"></script>
+</body>
+</html>

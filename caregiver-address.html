@@ -1,0 +1,981 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CareCart - Delivery Address</title>
+
+  <!-- =====================================================
+       GOOGLE FONTS
+  ====================================================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- =====================================================
+       GLOBAL + CAREGIVER CSS
+  ====================================================== -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/caregiver.css">
+    <link rel="icon" href="assets/images/carecart_logo.png">
+
+  <!-- =====================================================
+       LUCIDE ICONS
+  ====================================================== -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="caregiver-body">
+
+  <!-- =====================================================
+       MOBILE MENU
+  ====================================================== -->
+
+  <button
+    id="mobileMenuBtn"
+    class="mobile-menu-btn"
+    aria-label="Open Menu"
+  >
+    <i data-lucide="menu"></i>
+  </button>
+
+  <div
+    id="mobileOverlay"
+    class="mobile-overlay"
+  ></div>
+
+
+  <!-- =====================================================
+       SIDEBAR
+  ====================================================== -->
+
+  <aside
+    id="caregiverSidebar"
+    class="caregiver-sidebar"
+  >
+
+    <!-- LOGO -->
+
+    <div class="sidebar-logo-container">
+
+      <a href="index.html" class="sidebar-logo">
+        <img src="assets/images/carecart_logo.png" alt="CareCart Logo" class="sidebar-logo-img">
+        <div>
+          <h1 class="logo-title">CareCart</h1>
+          <p class="logo-subtitle">Caregiver Portal</p>
+        </div>
+      </a>
+
+      <button
+        id="closeMobileMenuBtn"
+        class="close-mobile-btn"
+        aria-label="Close Menu"
+      >
+        <i data-lucide="x"></i>
+      </button>
+
+    </div>
+
+
+    <!-- CAREGIVER INFO -->
+
+    <div class="sidebar-info-box">
+
+      <div class="info-card">
+
+        <div class="info-icon">
+          <i data-lucide="shield-check"></i>
+        </div>
+
+        <div class="info-text">
+
+          <p class="info-name">
+            Caregiver
+          </p>
+
+          <p class="info-desc">
+            Managing Senior Account
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="sidebar-nav">
+
+      <p class="nav-heading">
+        Caregiver Menu
+      </p>
+
+      <a
+        href="caregiver.html"
+        class="nav-item"
+      >
+        <i data-lucide="layout-dashboard"></i>
+        <span>Dashboard</span>
+      </a>
+
+      <a
+        href="senior-profile.html"
+        class="nav-item"
+      >
+        <i data-lucide="user-round"></i>
+        <span>Senior Profile</span>
+      </a>
+
+      <a
+        href="caregiver-address.html"
+        class="nav-item active"
+      >
+        <i data-lucide="map-pin"></i>
+        <span>Delivery Address</span>
+      </a>
+
+      <a
+        href="caregiver-preferences.html"
+        class="nav-item"
+      >
+        <i data-lucide="heart-pulse"></i>
+        <span>Dietary Preferences</span>
+      </a>
+
+      <a
+        href="caregiver-frequently-ordered.html"
+        class="nav-item"
+      >
+        <i data-lucide="shopping-bag"></i>
+        <span>Frequently Ordered</span>
+      </a>
+
+      <a
+        href="caregiver-orders.html"
+        class="nav-item"
+      >
+        <i data-lucide="clipboard-list"></i>
+        <span>Orders</span>
+      </a>
+
+    </nav>
+
+
+    <!-- APPEARANCE -->
+
+    <div class="sidebar-theme-controls">
+
+      <div class="theme-card">
+
+        <p class="nav-heading">
+          Appearance
+        </p>
+
+        <button
+          id="cgDarkModeToggle"
+          class="theme-btn"
+        >
+
+          <span class="theme-icon">
+            <i
+              data-lucide="moon"
+              id="cgDarkModeIcon"
+            ></i>
+          </span>
+
+          <span id="cgDarkModeText">
+            Dark Mode
+          </span>
+
+        </button>
+
+
+        <button
+          id="cgRtlToggle"
+          class="theme-btn"
+        >
+
+          <span class="theme-icon">
+            <i
+              data-lucide="arrow-left-right"
+              id="cgRtlIcon"
+              class="text-green"
+            ></i>
+          </span>
+
+          <span id="cgRtlText">
+            Switch to RTL
+          </span>
+
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- LOGOUT -->
+
+    <div class="sidebar-logout">
+
+      <button
+        id="cgLogoutBtn"
+        class="logout-btn"
+      >
+
+        <i data-lucide="log-out"></i>
+
+        <span>
+          Logout
+        </span>
+
+      </button>
+
+    </div>
+
+  </aside>
+
+
+  <!-- =====================================================
+       MAIN CONTENT
+  ====================================================== -->
+
+  <main class="caregiver-main">
+
+    <div class="dashboard-container caregiver-address-page">
+
+
+      <!-- =================================================
+           PAGE HEADER
+      ================================================== -->
+
+      <section class="address-page-header">
+
+        <div class="address-header-content">
+
+          <div class="address-header-icon">
+            <i data-lucide="map-pin-house"></i>
+          </div>
+
+          <div>
+
+            <div class="address-eyebrow">
+              <span></span>
+              DELIVERY MANAGEMENT
+            </div>
+
+            <h1 class="address-page-title">
+              Delivery Address
+            </h1>
+
+            <p class="address-page-description">
+              Manage where Lakshmi's groceries are delivered and
+              make every delivery simple and reliable.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <button
+          class="address-add-button"
+          id="addAddressBtn"
+        >
+
+          <span class="address-add-icon">
+            <i data-lucide="plus"></i>
+          </span>
+
+          <span>
+            Add New Address
+          </span>
+
+        </button>
+
+      </section>
+
+
+
+      <!-- =================================================
+           DEFAULT ADDRESS
+      ================================================== -->
+
+      <section class="primary-address-card">
+
+        <div class="primary-address-glow"></div>
+
+        <div class="primary-address-top">
+
+          <div class="primary-address-label">
+
+            <div class="primary-address-label-icon">
+              <i data-lucide="check"></i>
+            </div>
+
+            <div>
+              <span>DEFAULT DELIVERY ADDRESS</span>
+              <strong>Ready for delivery</strong>
+            </div>
+
+          </div>
+
+
+          <div class="primary-address-actions">
+
+            <button
+              class="address-action-btn"
+              title="Edit address"
+            >
+              <i data-lucide="pencil"></i>
+            </button>
+
+            <button
+              class="address-action-btn delete"
+              title="Delete address"
+            >
+              <i data-lucide="trash-2"></i>
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div class="primary-address-main">
+
+          <div class="home-location-icon">
+            <i data-lucide="house"></i>
+          </div>
+
+          <div class="primary-address-details">
+
+            <div class="address-title-row">
+
+              <h2>
+                Lakshmi Narayanan
+              </h2>
+
+              <span class="home-badge">
+                Home
+              </span>
+
+            </div>
+
+            <p class="primary-phone">
+              <i data-lucide="phone"></i>
+              +91 98765 43210
+            </p>
+
+            <div class="full-address">
+
+              <span>
+                12, Kamarajar Street
+              </span>
+
+              <span>
+                T. Nagar, Chennai
+              </span>
+
+              <span>
+                Tamil Nadu - 600017
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="verified-mini">
+
+            <i data-lucide="badge-check"></i>
+
+            <span>
+              Verified
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="primary-address-footer">
+
+          <div>
+            <i data-lucide="truck"></i>
+            <span>Available for grocery delivery</span>
+          </div>
+
+          <div>
+            <i data-lucide="clock-3"></i>
+            <span>Estimated delivery: 30–45 min</span>
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- =================================================
+           TWO COLUMN SECTION
+      ================================================== -->
+
+      <div class="address-content-grid">
+
+
+        <!-- ===============================================
+             DELIVERY INSTRUCTIONS
+        ================================================ -->
+
+        <section class="address-panel instructions-panel">
+
+          <div class="panel-heading">
+
+            <div class="panel-heading-icon blue">
+              <i data-lucide="message-square-text"></i>
+            </div>
+
+            <div>
+
+              <h3>
+                Delivery Instructions
+              </h3>
+
+              <p>
+                Help our delivery partner find the home easily.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="instruction-highlight">
+
+            <div class="instruction-icon">
+              <i data-lucide="door-open"></i>
+            </div>
+
+            <div>
+
+              <strong>
+                Current instruction
+              </strong>
+
+              <p>
+                Leave the groceries at the front door.
+                Please call the caregiver when you arrive.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <textarea
+            id="deliveryInstructions"
+            class="address-textarea"
+            placeholder="Add special instructions for the delivery partner..."
+          >Leave the groceries at the front door. Please call the caregiver when you arrive.</textarea>
+
+
+          <div class="panel-footer">
+
+            <span>
+              <i data-lucide="info"></i>
+              Instructions are shared with the delivery partner.
+            </span>
+
+            <button
+              class="save-small-btn"
+              id="saveInstructionsBtn"
+            >
+              Save Changes
+            </button>
+
+          </div>
+
+        </section>
+
+
+
+        <!-- ===============================================
+             ADDRESS VERIFICATION
+        ================================================ -->
+
+        <section class="address-panel verification-panel">
+
+          <div class="panel-heading">
+
+            <div class="panel-heading-icon green">
+              <i data-lucide="shield-check"></i>
+            </div>
+
+            <div>
+
+              <h3>
+                Address Verification
+              </h3>
+
+              <p>
+                Your delivery location is confirmed.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="verification-status">
+
+            <div class="verification-check">
+              <i data-lucide="check"></i>
+            </div>
+
+            <div>
+
+              <strong>
+                Address Verified
+              </strong>
+
+              <span>
+                Location matched successfully
+              </span>
+
+            </div>
+
+            <span class="verified-pill">
+              Verified
+            </span>
+
+          </div>
+
+
+          <div class="map-preview">
+
+            <div class="map-pattern">
+
+              <div class="map-road road-one"></div>
+              <div class="map-road road-two"></div>
+              <div class="map-road road-three"></div>
+
+              <div class="map-location">
+
+                <div class="map-location-pulse"></div>
+
+                <i data-lucide="map-pin"></i>
+
+              </div>
+
+            </div>
+
+            <div class="map-label">
+
+              <i data-lucide="map-pin"></i>
+
+              <span>
+                T. Nagar, Chennai
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="verification-footer">
+
+            <span>
+              <i data-lucide="navigation"></i>
+              Accurate delivery routing enabled
+            </span>
+
+            <button class="text-link-btn">
+              View Map
+              <i data-lucide="arrow-up-right"></i>
+            </button>
+
+          </div>
+
+        </section>
+
+      </div>
+
+
+
+      <!-- =================================================
+           PAYMENT + STORES
+      ================================================== -->
+
+      <div class="address-content-grid bottom-grid-address">
+
+
+        <!-- ===============================================
+             PAYMENT METHODS
+        ================================================ -->
+
+        <section class="address-panel payment-panel">
+
+          <div class="panel-heading">
+
+            <div class="panel-heading-icon purple">
+              <i data-lucide="credit-card"></i>
+            </div>
+
+            <div>
+
+              <h3>
+                Saved Payment Methods
+              </h3>
+
+              <p>
+                Payment methods available for grocery orders.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="payment-list">
+
+
+            <!-- CARD -->
+
+            <div class="payment-card active">
+
+              <div class="payment-brand visa">
+                VISA
+              </div>
+
+              <div class="payment-information">
+
+                <strong>
+                  Visa ending in 4242
+                </strong>
+
+                <span>
+                  Expires 12/28
+                </span>
+
+              </div>
+
+              <div class="payment-check">
+                <i data-lucide="check"></i>
+              </div>
+
+            </div>
+
+
+            <!-- ADD CARD -->
+
+            <button
+              class="add-payment-card"
+              id="addPaymentBtn"
+            >
+
+              <div class="add-payment-icon">
+                <i data-lucide="plus"></i>
+              </div>
+
+              <div>
+
+                <strong>
+                  Add Payment Method
+                </strong>
+
+                <span>
+                  Add another card
+                </span>
+
+              </div>
+
+              <i
+                data-lucide="arrow-right"
+                class="payment-arrow"
+              ></i>
+
+            </button>
+
+          </div>
+
+        </section>
+
+
+
+        <!-- ===============================================
+             NEIGHBORHOOD STORES
+        ================================================ -->
+
+        <section class="address-panel stores-panel">
+
+          <div class="panel-heading">
+
+            <div class="panel-heading-icon orange">
+              <i data-lucide="store"></i>
+            </div>
+
+            <div>
+
+              <h3>
+                Neighborhood Stores
+              </h3>
+
+              <p>
+                Nearby CareCart partner stores.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="store-list">
+
+
+            <!-- STORE 1 -->
+
+            <div class="store-item">
+
+              <div class="store-icon">
+                <i data-lucide="shopping-basket"></i>
+              </div>
+
+              <div class="store-information">
+
+                <strong>
+                  FreshMart Express
+                </strong>
+
+                <span>
+                  1.2 km away · Open until 10 PM
+                </span>
+
+              </div>
+
+              <span class="preferred-store">
+                Preferred
+              </span>
+
+            </div>
+
+
+            <!-- STORE 2 -->
+
+            <div class="store-item">
+
+              <div class="store-icon secondary">
+                <i data-lucide="store"></i>
+              </div>
+
+              <div class="store-information">
+
+                <strong>
+                  City Grocers
+                </strong>
+
+                <span>
+                  3.5 km away · Open 24/7
+                </span>
+
+              </div>
+
+              <button class="store-arrow">
+                <i data-lucide="chevron-right"></i>
+              </button>
+
+            </div>
+
+
+            <!-- STORE 3 -->
+
+            <div class="store-item">
+
+              <div class="store-icon third">
+                <i data-lucide="shopping-cart"></i>
+              </div>
+
+              <div class="store-information">
+
+                <strong>
+                  Green Basket
+                </strong>
+
+                <span>
+                  4.1 km away · Open until 9 PM
+                </span>
+
+              </div>
+
+              <button class="store-arrow">
+                <i data-lucide="chevron-right"></i>
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <button class="view-stores-btn">
+
+            View All Nearby Stores
+
+            <i data-lucide="arrow-right"></i>
+
+          </button>
+
+        </section>
+
+      </div>
+
+
+
+      <!-- =================================================
+           DELIVERY SAFETY BANNER
+      ================================================== -->
+
+      <section class="address-safety-banner">
+
+        <div class="safety-icon">
+          <i data-lucide="heart-handshake"></i>
+        </div>
+
+        <div class="safety-content">
+
+          <span class="safety-label">
+            CARECART DELIVERY CARE
+          </span>
+
+          <h3>
+            Making every delivery easier for your senior.
+          </h3>
+
+          <p>
+            Your verified address and delivery instructions help
+            our team provide a safe and reliable grocery experience.
+          </p>
+
+        </div>
+
+        <a
+          href="caregiver-orders.html"
+          class="safety-action"
+        >
+          View Orders
+          <i data-lucide="arrow-right"></i>
+        </a>
+
+      </section>
+
+
+    </div>
+
+  </main>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
+  <script src="js/main.js"></script>
+  <script src="js/caregiver.js"></script>
+
+  <script>
+    /* =====================================================
+       LUCIDE ICON INITIALIZATION
+    ====================================================== */
+
+    document.addEventListener("DOMContentLoaded", () => {
+
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+
+
+      /* ===================================================
+         SAVE DELIVERY INSTRUCTIONS
+      ================================================== */
+
+      const saveBtn =
+        document.getElementById("saveInstructionsBtn");
+
+      const textarea =
+        document.getElementById("deliveryInstructions");
+
+
+      if (saveBtn && textarea) {
+
+        saveBtn.addEventListener("click", () => {
+
+          const originalText = saveBtn.textContent;
+
+          saveBtn.textContent = "Saved ✓";
+
+          saveBtn.classList.add("saved");
+
+          setTimeout(() => {
+
+            saveBtn.textContent = originalText;
+
+            saveBtn.classList.remove("saved");
+
+          }, 1800);
+
+        });
+
+      }
+
+
+      /* ===================================================
+         ADD ADDRESS
+      ================================================== */
+
+      const addAddressBtn =
+        document.getElementById("addAddressBtn");
+
+      if (addAddressBtn) {
+
+        addAddressBtn.addEventListener("click", () => {
+
+          alert(
+            "Address form can be connected here."
+          );
+
+        });
+
+      }
+
+
+      /* ===================================================
+         ADD PAYMENT
+      ================================================== */
+
+      const addPaymentBtn =
+        document.getElementById("addPaymentBtn");
+
+      if (addPaymentBtn) {
+
+        addPaymentBtn.addEventListener("click", () => {
+
+          alert(
+            "Payment method form can be connected here."
+          );
+
+        });
+
+      }
+
+    });
+  </script>
+
+</body>
+</html>
+

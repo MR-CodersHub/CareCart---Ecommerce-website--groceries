@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareCart - Orders</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/caregiver.css" />
+    <link rel="icon" href="assets/images/carecart_logo.png">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="caregiver-body">
+
+  <!-- ================= MOBILE MENU BUTTON ================= -->
+  <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Open Menu">
+    <i data-lucide="menu"></i>
+  </button>
+
+  <!-- ================= MOBILE OVERLAY ================= -->
+  <div id="mobileOverlay" class="mobile-overlay"></div>
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside id="caregiverSidebar" class="caregiver-sidebar">
+    
+    <!-- LOGO -->
+    <div class="sidebar-logo-container">
+      <a href="index.html" class="sidebar-logo">
+        <img src="assets/images/carecart_logo.png" alt="CareCart Logo" class="sidebar-logo-img">
+        <div>
+          <h1 class="logo-title">CareCart</h1>
+          <p class="logo-subtitle">Caregiver Portal</p>
+        </div>
+      </a>
+      <button id="closeMobileMenuBtn" class="close-mobile-btn">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <!-- CAREGIVER INFO -->
+    <div class="sidebar-info-box">
+      <div class="info-card">
+        <div class="info-icon">
+          <i data-lucide="shield-check"></i>
+        </div>
+        <div class="info-text">
+          <p class="info-name">Caregiver</p>
+          <p class="info-desc">Managing Senior Account</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="sidebar-nav">
+      <p class="nav-heading">Caregiver Menu</p>
+      
+      <a href="caregiver.html" class="nav-item">
+        <i data-lucide="layout-dashboard"></i>
+        <span>Dashboard</span>
+      </a>
+      <a href="senior-profile.html" class="nav-item">
+        <i data-lucide="user-round"></i>
+        <span>Senior Profile</span>
+      </a>
+      <a href="caregiver-address.html" class="nav-item">
+        <i data-lucide="map-pin"></i>
+        <span>Delivery Address</span>
+      </a>
+      <a href="caregiver-preferences.html" class="nav-item">
+        <i data-lucide="heart-pulse"></i>
+        <span>Dietary Preferences</span>
+      </a>
+      <a href="caregiver-frequently-ordered.html" class="nav-item">
+        <i data-lucide="shopping-bag"></i>
+        <span>Frequently Ordered</span>
+      </a>
+      <a href="caregiver-orders.html" class="nav-item active">
+        <i data-lucide="clipboard-list"></i>
+        <span>Orders</span>
+      </a>
+    </nav>
+
+    <!-- THEME CONTROLS -->
+    <div class="sidebar-theme-controls">
+      <div class="theme-card">
+        <p class="nav-heading">Appearance</p>
+        <button id="cgDarkModeToggle" class="theme-btn">
+          <span class="theme-icon">
+            <i data-lucide="moon" id="cgDarkModeIcon"></i>
+          </span>
+          <span id="cgDarkModeText">Dark Mode</span>
+        </button>
+
+        <button id="cgRtlToggle" class="theme-btn">
+          <span class="theme-icon">
+            <i data-lucide="arrow-left-right" id="cgRtlIcon" class="text-green"></i>
+          </span>
+          <span id="cgRtlText">Switch to RTL</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- LOGOUT -->
+    <div class="sidebar-logout">
+      <button id="cgLogoutBtn" class="logout-btn">
+        <i data-lucide="log-out"></i>
+        <span>Logout</span>
+      </button>
+    </div>
+
+  </aside>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="caregiver-main">
+    <div class="dashboard-container">
+      
+      <!-- HEADER -->
+      <div class="dashboard-header">
+        <div class="header-text-block">
+          <h1 class="header-title">Order History</h1>
+          <p class="header-desc">
+            Review past orders, track current deliveries, and view invoices.
+          </p>
+        </div>
+      </div>
+
+      <!-- ORDERS LIST -->
+      <div class="orders-list premium-orders">
+        
+        <!-- ORDER 1 -->
+        <div class="dashboard-card premium-order-card">
+          <div class="premium-order-header">
+            <div class="premium-order-info">
+              <div class="premium-order-icon bg-green-light">
+                <i data-lucide="package-check" class="text-green"></i>
+              </div>
+              <div>
+                <h3 class="card-title">Order #CC1024</h3>
+                <p class="card-desc">Placed on Aug 28, 2026</p>
+              </div>
+            </div>
+            <span class="badge-delivered"><i data-lucide="check-circle-2" class="icon-sm"></i> Delivered</span>
+          </div>
+
+          <div class="premium-order-body">
+            <div class="premium-items-grid">
+              <div class="premium-item">
+                <div class="item-img-placeholder bg-pink-light text-pink"><i data-lucide="apple"></i></div>
+                <div class="item-meta">
+                  <h4>Apples</h4>
+                  <p>1 kg</p>
+                </div>
+              </div>
+              <div class="premium-item">
+                <div class="item-img-placeholder bg-blue-light text-blue"><i data-lucide="milk"></i></div>
+                <div class="item-meta">
+                  <h4>Milk</h4>
+                  <p>2 Liters</p>
+                </div>
+              </div>
+              <div class="premium-item">
+                <div class="item-img-placeholder bg-yellow-light text-yellow"><i data-lucide="croissant"></i></div>
+                <div class="item-meta">
+                  <h4>Bread</h4>
+                  <p>1 Loaf</p>
+                </div>
+              </div>
+              <div class="premium-item">
+                <div class="item-img-placeholder bg-green-light text-green"><i data-lucide="leaf"></i></div>
+                <div class="item-meta">
+                  <h4>Spinach</h4>
+                  <p>2 Bunches</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="premium-order-summary">
+              <div class="summary-total">
+                <p>Total Amount</p>
+                <h3>₹540</h3>
+              </div>
+              <div class="summary-actions">
+                <button class="btn-outline">View Details</button>
+                <button class="btn-shop"><i data-lucide="rotate-cw" class="icon-sm"></i> Reorder</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ORDER 2 -->
+        <div class="dashboard-card premium-order-card">
+          <div class="premium-order-header">
+            <div class="premium-order-info">
+              <div class="premium-order-icon bg-blue-light">
+                <i data-lucide="truck" class="text-blue"></i>
+              </div>
+              <div>
+                <h3 class="card-title">Order #CC1025</h3>
+                <p class="card-desc">Placed on Sep 01, 2026</p>
+              </div>
+            </div>
+            <span class="badge-progress"><i data-lucide="loader" class="icon-sm"></i> In Transit</span>
+          </div>
+
+          <div class="premium-order-body">
+            <div class="premium-items-grid">
+              <div class="premium-item">
+                <div class="item-img-placeholder bg-yellow-light text-yellow"><i data-lucide="egg"></i></div>
+                <div class="item-meta">
+                  <h4>Eggs</h4>
+                  <p>12 pieces</p>
+                </div>
+              </div>
+              <div class="premium-item">
+                <div class="item-img-placeholder bg-blue-light text-blue"><i data-lucide="fish"></i></div>
+                <div class="item-meta">
+                  <h4>Fish</h4>
+                  <p>500g</p>
+                </div>
+              </div>
+              <div class="premium-item">
+                <div class="item-img-placeholder bg-pink-light text-pink"><i data-lucide="carrot"></i></div>
+                <div class="item-meta">
+                  <h4>Carrots</h4>
+                  <p>1 kg</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="premium-order-summary">
+              <div class="summary-total">
+                <p>Total Amount</p>
+                <h3>₹890</h3>
+              </div>
+              <div class="summary-actions">
+                <button class="btn-outline">Track Order</button>
+                <button class="btn-shop" disabled style="opacity: 0.5;">Reorder</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/caregiver.js"></script>
+</body>
+</html>

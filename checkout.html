@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareCart - Checkout</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/checkout.css" />
+    <link rel="icon" href="assets/images/carecart_logo.png">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  >
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <div id="navbar"></div>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="checkout-page">
+    <div class="checkout-container">
+
+      <!-- ================= HEADER ================= -->
+      <div class="checkout-header">
+        <a href="cart.html" class="back-to-cart">
+          <span class="back-icon">
+            <i data-lucide="arrow-left"></i>
+          </span>
+          Back to Cart
+        </a>
+
+        <div class="header-right">
+          <div class="checkout-icon-wrapper">
+            <i data-lucide="shopping-bag"></i>
+          </div>
+          <div>
+            <h1>Checkout</h1>
+            <p>Complete your grocery order</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= PROGRESS ================= -->
+      <div class="progress-bar-container">
+        <div class="progress-bar-flex">
+          
+          <!-- STEP 1 -->
+          <div class="progress-step">
+            <div class="step-icon step-active">
+              <i data-lucide="check"></i>
+            </div>
+            <span class="step-label label-active">Address</span>
+          </div>
+
+          <div class="step-line line-active"></div>
+
+          <!-- STEP 2 -->
+          <div class="progress-step">
+            <div class="step-icon step-active">
+              <i data-lucide="check"></i>
+            </div>
+            <span class="step-label label-active">Summary</span>
+          </div>
+
+          <div class="step-line line-active"></div>
+
+          <!-- STEP 3 -->
+          <div class="progress-step">
+            <div class="step-icon step-active">3</div>
+            <span class="step-label label-active">Payment</span>
+          </div>
+
+          <div class="step-line line-inactive"></div>
+
+          <!-- STEP 4 -->
+          <div class="progress-step">
+            <div class="step-icon step-inactive">4</div>
+            <span class="step-label label-inactive">Confirm</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ================= EMPTY CART ================= -->
+      <div id="emptyCheckout" class="empty-checkout hidden">
+        <div class="empty-icon">
+          <i data-lucide="shopping-bag"></i>
+        </div>
+        <h2>Your cart is empty</h2>
+        <p>Add some groceries before proceeding to checkout.</p>
+        <a href="shop.html" class="btn-primary">Go to Shop</a>
+      </div>
+
+      <!-- ================= MAIN CHECKOUT ================= -->
+      <div id="checkoutContent" class="checkout-content hidden">
+        
+        <div class="checkout-left">
+          
+          <!-- ADDRESS -->
+          <section class="checkout-section">
+            <div class="section-header">
+              <div>
+                <p class="section-badge">Delivery</p>
+                <h2 class="section-title">Delivery Address</h2>
+              </div>
+              <button class="change-btn">Change</button>
+            </div>
+
+            <div class="address-card">
+              <div class="address-flex">
+                <div class="address-icon">
+                  <i data-lucide="map-pin"></i>
+                </div>
+                <div class="address-details">
+                  <div class="address-name-row">
+                    <h3>Lakshmi Narayanan</h3>
+                    <span class="tag-home">HOME</span>
+                  </div>
+                  <p class="address-text">
+                    12, Green Park Street,<br />
+                    Anna Nagar, Chennai - 600040
+                  </p>
+                  <div class="address-verified">
+                    <i data-lucide="check"></i> Address verified
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ORDER ITEMS -->
+          <section class="checkout-section">
+            <div class="section-header">
+              <div>
+                <p class="section-badge">Your groceries</p>
+                <h2 class="section-title">Order Summary</h2>
+              </div>
+              <span class="items-count-badge" id="orderItemsCount">0 items</span>
+            </div>
+
+            <div class="order-items-list" id="orderItemsList">
+              <!-- Injected by JS -->
+            </div>
+          </section>
+
+          <!-- PAYMENT -->
+          <section class="checkout-section">
+            <div class="section-header">
+              <div>
+                <p class="section-badge">Secure payment</p>
+                <h2 class="section-title">Payment Method</h2>
+              </div>
+            </div>
+
+            <div class="payment-methods">
+              
+              <!-- COD -->
+              <button class="payment-method active" id="btnCod" onclick="setPaymentMethod('cod')">
+                <div class="payment-flex">
+                  <div class="payment-icon">
+                    <i data-lucide="banknote"></i>
+                  </div>
+                  <div class="payment-details">
+                    <p class="payment-name">Cash on Delivery</p>
+                    <p class="payment-desc">Pay when your groceries arrive</p>
+                  </div>
+                </div>
+                <div class="radio-outer radio-active" id="radioCod">
+                  <div class="radio-inner"></div>
+                </div>
+              </button>
+
+              <!-- UPI -->
+              <button class="payment-method" id="btnUpi" onclick="setPaymentMethod('upi')">
+                <div class="payment-flex">
+                  <div class="payment-icon">
+                    <i data-lucide="credit-card"></i>
+                  </div>
+                  <div class="payment-details">
+                    <p class="payment-name">UPI / Card</p>
+                    <p class="payment-desc">Secure online payment (Demo)</p>
+                  </div>
+                </div>
+                <div class="radio-outer" id="radioUpi">
+                  <div class="radio-inner"></div>
+                </div>
+              </button>
+
+            </div>
+          </section>
+
+        </div>
+
+        <!-- ================= RIGHT SIDE ================= -->
+        <aside class="checkout-right">
+          <div class="price-details-card">
+            
+            <div class="section-header">
+              <div>
+                <p class="section-badge">Final amount</p>
+                <h2 class="section-title">Price Details</h2>
+              </div>
+            </div>
+
+            <div class="price-list">
+              <div class="price-row">
+                <span class="price-label">Items (<span id="totalItemsDisplay">0</span>)</span>
+                <span class="price-value" id="subtotalDisplay">₹0</span>
+              </div>
+              <div class="price-row">
+                <span class="price-label">Delivery Fee</span>
+                <span class="price-value delivery-fee" id="deliveryDisplay">FREE</span>
+              </div>
+            </div>
+
+            <div class="free-delivery-msg">
+              <i data-lucide="truck"></i> Fresh delivery to your doorstep
+            </div>
+
+            <div class="total-section">
+              <div class="total-row">
+                <span class="total-label">Total Amount</span>
+                <span class="total-value" id="totalDisplay">₹0</span>
+              </div>
+            </div>
+
+            <button class="place-order-btn" onclick="handlePlaceOrder()">
+              Place Order
+            </button>
+
+            <div class="secure-checkout">
+              <div class="secure-flex">
+                <div class="secure-icon">
+                  <i data-lucide="shield-check"></i>
+                </div>
+                <div class="secure-text">
+                  <p class="secure-title">Safe & secure checkout</p>
+                  <p class="secure-desc">Your order information is protected.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="delivery-guarantee">
+              <div class="delivery-icon">
+                <i data-lucide="truck"></i>
+              </div>
+              <div class="delivery-text">
+                <p class="delivery-title">Fresh doorstep delivery</p>
+                <p class="delivery-desc">Carefully packed for your family.</p>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <div id="footer"></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

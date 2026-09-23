@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareCart - Frequently Ordered</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/caregiver.css" />
+    <link rel="icon" href="assets/images/carecart_logo.png">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="caregiver-body">
+
+  <!-- ================= MOBILE MENU BUTTON ================= -->
+  <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Open Menu">
+    <i data-lucide="menu"></i>
+  </button>
+
+  <!-- ================= MOBILE OVERLAY ================= -->
+  <div id="mobileOverlay" class="mobile-overlay"></div>
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside id="caregiverSidebar" class="caregiver-sidebar">
+    
+    <!-- LOGO -->
+    <div class="sidebar-logo-container">
+      <a href="index.html" class="sidebar-logo">
+        <img src="assets/images/carecart_logo.png" alt="CareCart Logo" class="sidebar-logo-img">
+        <div>
+          <h1 class="logo-title">CareCart</h1>
+          <p class="logo-subtitle">Caregiver Portal</p>
+        </div>
+      </a>
+      <button id="closeMobileMenuBtn" class="close-mobile-btn">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <!-- CAREGIVER INFO -->
+    <div class="sidebar-info-box">
+      <div class="info-card">
+        <div class="info-icon">
+          <i data-lucide="shield-check"></i>
+        </div>
+        <div class="info-text">
+          <p class="info-name">Caregiver</p>
+          <p class="info-desc">Managing Senior Account</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="sidebar-nav">
+      <p class="nav-heading">Caregiver Menu</p>
+      
+      <a href="caregiver.html" class="nav-item">
+        <i data-lucide="layout-dashboard"></i>
+        <span>Dashboard</span>
+      </a>
+      <a href="senior-profile.html" class="nav-item">
+        <i data-lucide="user-round"></i>
+        <span>Senior Profile</span>
+      </a>
+      <a href="caregiver-address.html" class="nav-item">
+        <i data-lucide="map-pin"></i>
+        <span>Delivery Address</span>
+      </a>
+      <a href="caregiver-preferences.html" class="nav-item">
+        <i data-lucide="heart-pulse"></i>
+        <span>Dietary Preferences</span>
+      </a>
+      <a href="caregiver-frequently-ordered.html" class="nav-item active">
+        <i data-lucide="shopping-bag"></i>
+        <span>Frequently Ordered</span>
+      </a>
+      <a href="caregiver-orders.html" class="nav-item">
+        <i data-lucide="clipboard-list"></i>
+        <span>Orders</span>
+      </a>
+    </nav>
+
+    <!-- THEME CONTROLS -->
+    <div class="sidebar-theme-controls">
+      <div class="theme-card">
+        <p class="nav-heading">Appearance</p>
+        <button id="cgDarkModeToggle" class="theme-btn">
+          <span class="theme-icon">
+            <i data-lucide="moon" id="cgDarkModeIcon"></i>
+          </span>
+          <span id="cgDarkModeText">Dark Mode</span>
+        </button>
+        <button id="cgRtlToggle" class="theme-btn">
+          <span class="theme-icon">
+            <i data-lucide="arrow-left-right" id="cgRtlIcon" class="text-green"></i>
+          </span>
+          <span id="cgRtlText">Switch to RTL</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- LOGOUT -->
+    <div class="sidebar-logout">
+      <button id="cgLogoutBtn" class="logout-btn">
+        <i data-lucide="log-out"></i>
+        <span>Logout</span>
+      </button>
+    </div>
+
+  </aside>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="caregiver-main">
+    <div class="dashboard-container">
+      
+      <!-- HEADER -->
+      <div class="dashboard-header">
+        <div class="header-text-block">
+          <h1 class="header-title">Frequently Ordered</h1>
+          <p class="header-desc">
+            Quickly re-order the items your senior family member purchases the most.
+          </p>
+        </div>
+        <button class="btn-shop" onclick="window.location.href='cart.html'">
+          <i data-lucide="shopping-cart"></i>
+          Add All to Cart
+        </button>
+      </div>
+
+      <!-- PRODUCTS GRID -->
+      <div class="freq-products-grid">
+        
+        <div class="freq-product-card">
+          <div class="freq-img-box">
+            <img src="https://images.unsplash.com/photo-1561136594-7f68413baa99?q=80&w=300&auto=format&fit=crop" alt="Fresh Tomatoes" />
+          </div>
+          <div class="freq-info">
+            <p class="freq-times-ordered">Ordered 12 times</p>
+            <h3 class="freq-title">Fresh Tomatoes</h3>
+            <p class="freq-price">₹45 / kg</p>
+            <button class="btn-outline w-full mt-2 justify-center">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="freq-product-card">
+          <div class="freq-img-box">
+            <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?q=80&w=300&auto=format&fit=crop" alt="Organic Milk" />
+          </div>
+          <div class="freq-info">
+            <p class="freq-times-ordered">Ordered 10 times</p>
+            <h3 class="freq-title">Organic Cow Milk</h3>
+            <p class="freq-price">₹60 / L</p>
+            <button class="btn-outline w-full mt-2 justify-center">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="freq-product-card">
+          <div class="freq-img-box">
+            <img src="https://images.unsplash.com/photo-1595858619620-80a184f47914?q=80&w=300&auto=format&fit=crop" alt="Whole Wheat Bread" />
+          </div>
+          <div class="freq-info">
+            <p class="freq-times-ordered">Ordered 8 times</p>
+            <h3 class="freq-title">Whole Wheat Bread</h3>
+            <p class="freq-price">₹40 / loaf</p>
+            <button class="btn-outline w-full mt-2 justify-center">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="freq-product-card">
+          <div class="freq-img-box">
+            <img src="https://images.unsplash.com/photo-1587049352847-4d4b127ce352?q=80&w=300&auto=format&fit=crop" alt="Apples" />
+          </div>
+          <div class="freq-info">
+            <p class="freq-times-ordered">Ordered 7 times</p>
+            <h3 class="freq-title">Fuji Apples</h3>
+            <p class="freq-price">₹180 / kg</p>
+            <button class="btn-outline w-full mt-2 justify-center">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="freq-product-card">
+          <div class="freq-img-box">
+            <img src="https://images.unsplash.com/photo-1595858619620-80a184f47914?q=80&w=300&auto=format&fit=crop" alt="Bananas" />
+          </div>
+          <div class="freq-info">
+            <p class="freq-times-ordered">Ordered 6 times</p>
+            <h3 class="freq-title">Fresh Bananas</h3>
+            <p class="freq-price">₹50 / dozen</p>
+            <button class="btn-outline w-full mt-2 justify-center">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="freq-product-card">
+          <div class="freq-img-box">
+            <img src="https://images.unsplash.com/photo-1561136594-7f68413baa99?q=80&w=300&auto=format&fit=crop" alt="Potatoes" />
+          </div>
+          <div class="freq-info">
+            <p class="freq-times-ordered">Ordered 5 times</p>
+            <h3 class="freq-title">Potatoes</h3>
+            <p class="freq-price">₹35 / kg</p>
+            <button class="btn-outline w-full mt-2 justify-center">Add to Cart</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 1. SUBSCRIBE & SAVE -->
+      <div class="dashboard-card sub-save-card" style="margin-top: 1.5rem;">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-2">
+            <i data-lucide="refresh-cw" class="text-green icon-sm"></i>
+            <h3 class="card-title text-green">Subscribe & Save</h3>
+          </div>
+          <span class="tag tag-green">Save 10%</span>
+        </div>
+        <p class="card-desc mb-4 sub-save-desc">Set up automatic weekly deliveries for essentials like milk and bread.</p>
+        <button class="btn-outline w-full justify-center btn-sub-save"><i data-lucide="plus" class="icon-sm"></i> Setup Auto-Delivery</button>
+      </div>
+
+      <!-- 2. HEALTHY ALTERNATIVES -->
+      <div class="dashboard-card">
+        <div class="flex items-center gap-2 mb-4">
+          <i data-lucide="leaf" class="text-green icon-sm"></i>
+          <h3 class="card-title">Healthy Alternatives</h3>
+        </div>
+        <p class="card-desc mb-4">Recommended swaps based on dietary preferences.</p>
+        
+        <div class="flex flex-col gap-4">
+          <div class="flex items-center justify-between p-4 border border-dashed rounded-2xl border-gray-200 dark:border-slate-800">
+            <div class="flex items-center gap-4">
+              <span class="line-through text-gray-400">White Rice</span>
+              <i data-lucide="arrow-right" class="icon-sm text-blue"></i>
+              <span class="font-bold text-[#34745F] dark:text-emerald-400">Brown Rice (Low GI)</span>
+            </div>
+            <button class="btn-icon text-green"><i data-lucide="check-circle-2"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. SEASONAL RECOMMENDATIONS -->
+      <div class="dashboard-card">
+        <div class="flex items-center gap-2 mb-4">
+          <i data-lucide="sun" class="text-yellow icon-sm"></i>
+          <h3 class="card-title">Seasonal Fresh</h3>
+        </div>
+        <p class="card-desc mb-4">Fruits and vegetables currently in season.</p>
+        
+        <div class="flex gap-4 overflow-x-auto pb-2">
+          <div class="min-w-[120px] rounded-2xl p-4 text-center border border-gray-200 dark:border-slate-800 bg-gray-50/50 dark:bg-slate-800/40">
+            <i data-lucide="apple" class="text-red mx-auto mb-2 w-8 h-8"></i>
+            <p class="font-bold text-sm">Mangoes</p>
+            <p class="text-xs text-gray-500 dark:text-slate-400">Summer Special</p>
+          </div>
+          <div class="min-w-[120px] rounded-2xl p-4 text-center border border-gray-200 dark:border-slate-800 bg-gray-50/50 dark:bg-slate-800/40">
+            <i data-lucide="cherry" class="text-pink mx-auto mb-2 w-8 h-8"></i>
+            <p class="font-bold text-sm">Watermelon</p>
+            <p class="text-xs text-gray-500 dark:text-slate-400">Hydrating</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. BULK ORDER DISCOUNTS -->
+      <div class="dashboard-card">
+        <div class="flex items-center gap-2 mb-4">
+          <i data-lucide="package-open" class="text-blue icon-sm"></i>
+          <h3 class="card-title">Bulk Order Discounts</h3>
+        </div>
+        <p class="card-desc mb-4">Save more by purchasing non-perishables in larger quantities.</p>
+        
+        <div class="flex items-center justify-between p-4 rounded-2xl bg-blue-50 dark:bg-blue-950/30 border border-blue-100 dark:border-blue-900/50">
+          <div>
+            <p class="font-bold text-blue-900 dark:text-blue-300">Detergent Powder (5kg)</p>
+            <p class="text-xs text-blue-600 dark:text-blue-400">Save ₹150 vs buying 1kg packs</p>
+          </div>
+          <button class="btn-outline">Add</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/caregiver.js"></script>
+</body>
+</html>

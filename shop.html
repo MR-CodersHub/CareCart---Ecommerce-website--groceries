@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>CareCart - Fresh Groceries</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/products.css" />
+    <link rel="icon" href="assets/images/carecart_logo.png">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  >
+</head>
+
+<body>
+  <!-- ================= NAVBAR ================= -->
+  <div id="navbar"></div>
+
+  <!-- ================= HEADER ================= -->
+
+  <section class="shop-header">
+
+    <div class="header-container">
+
+      <div class="header-content">
+
+        <span class="store-badge">
+          <i data-lucide="heart"></i>
+          CareCart Grocery Store
+        </span>
+
+        <h1>
+          Fresh Groceries,
+          <br />
+          Made Simple
+        </h1>
+
+        <p>
+          Choose everyday essentials for your loved ones.
+          Build a grocery list, save your favorites, and
+          make repeat ordering easier.
+        </p>
+
+        <!-- SEARCH (Removed) -->
+
+        <div class="header-benefits">
+
+          <span>
+            <i data-lucide="shopping-bag"></i>
+            Senior-friendly shopping
+          </span>
+
+          <span>✓ Easy repeat ordering</span>
+
+          <span>✓ Caregiver support</span>
+
+        </div>
+
+      </div>
+
+
+      <!-- HEADER IMAGE -->
+
+      <div class="header-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=1000"
+          alt="Fresh groceries"
+        />
+
+        <div class="promise-card">
+
+          <small>CareCart Promise</small>
+
+          <strong>
+            Fresh essentials for every home
+          </strong>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= MAIN SHOP ================= -->
+
+  <main class="shop-page">
+
+    <!-- MOBILE CATEGORY BUTTON -->
+
+    <button class="mobile-category-btn" id="mobileCategoryBtn">
+
+      <span>
+        <i data-lucide="menu"></i>
+        Shop Categories
+      </span>
+
+      <span id="mobileSelectedCategory">
+        All Categories
+      </span>
+
+    </button>
+
+
+    <div class="shop-layout">
+
+
+      <!-- ================= SIDEBAR ================= -->
+
+      <aside class="sidebar">
+
+        <div class="sidebar-card">
+
+          <h2>Shop Categories</h2>
+
+          <div id="categoryList"></div>
+
+        </div>
+
+
+        <!-- HELP CARD -->
+
+        <div class="help-card">
+
+          <div class="help-icon">
+            <i data-lucide="heart"></i>
+          </div>
+
+          <h3>Need help shopping?</h3>
+
+          <p>
+            Our caregivers can help you choose
+            the right groceries.
+          </p>
+
+          <button>
+            Get Help
+          </button>
+
+        </div>
+
+      </aside>
+
+
+      <!-- ================= PRODUCTS ================= -->
+
+      <section class="products-section">
+
+
+        <!-- TITLE -->
+
+        <div class="products-heading">
+
+          <div>
+
+            <h2 id="categoryTitle">
+              Fresh Groceries
+            </h2>
+
+            <p>
+              Fresh, healthy and carefully selected for you
+            </p>
+
+          </div>
+
+          <span id="productCount">
+            0 products
+          </span>
+
+        </div>
+
+
+        <!-- ================= BANNER ================= -->
+
+        <div class="shop-banner">
+
+          <div class="banner-content">
+
+            <span class="fresh-badge">
+              FRESH & HEALTHY
+            </span>
+
+            <h3 id="bannerTitle">
+              Fresh Groceries
+            </h3>
+
+            <p id="bannerDescription">
+              Everyday essentials carefully selected
+              for your loved ones.
+            </p>
+
+            <button id="shopNowBtn">
+              Shop Now
+            </button>
+
+          </div>
+
+          <div class="banner-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=900"
+              alt="Fresh groceries"
+            />
+
+          </div>
+
+        </div>
+
+
+        <!-- ================= FILTERS ================= -->
+
+        <div class="product-filters">
+
+
+          <div class="filter-left">
+
+            <button class="filter-btn">
+
+              <i data-lucide="sliders-horizontal"></i>
+
+              Filter
+
+            </button>
+
+
+            <button
+              class="sort-btn"
+              id="sortButton"
+            >
+
+              <i data-lucide="arrow-up-down"></i>
+
+              <span id="sortText">
+                Sort: Popular
+              </span>
+
+            </button>
+
+          </div>
+
+
+          <!-- VIEW MODE -->
+
+          <div class="view-switch">
+
+            <button
+              class="active"
+              id="gridViewBtn"
+            >
+
+              <i data-lucide="grid-3x3"></i>
+
+            </button>
+
+            <button
+              id="listViewBtn"
+            >
+
+              <i data-lucide="list"></i>
+
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- ================= PRODUCT GRID ================= -->
+
+        <div
+          class="product-grid"
+          id="productGrid"
+        ></div>
+
+
+        <!-- EMPTY STATE -->
+
+        <div
+          class="empty-state hidden"
+          id="emptyState"
+        >
+
+          <h3>No groceries found</h3>
+
+          <p>
+            Try selecting another category.
+          </p>
+
+        </div>
+
+      </section>
+
+    </div>
+
+
+    <!-- ================= FEATURES ================= -->
+
+    <section class="features-section">
+
+      <div class="section-title">
+
+        <h2>Why Shop With CareCart?</h2>
+
+        <p>
+          We provide a tailored grocery experience
+          for seniors and caregivers.
+        </p>
+
+      </div>
+
+
+      <div class="features-grid">
+
+        <div class="feature-card">
+
+          <div class="feature-icon green">
+            🌿
+          </div>
+
+          <h3>Farm Fresh Quality</h3>
+
+          <p>
+            Every item is hand-picked for maximum
+            freshness and quality.
+          </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+          <div class="feature-icon blue">
+            🚚
+          </div>
+
+          <h3>Same-Day Delivery</h3>
+
+          <p>
+            Flexible delivery slots to fit your
+            loved ones' daily routine.
+          </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+          <div class="feature-icon orange">
+            🛡️
+          </div>
+
+          <h3>Secure & Reliable</h3>
+
+          <p>
+            Safe payments and dependable deliveries
+            you can trust.
+          </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+          <div class="feature-icon purple">
+            🤝
+          </div>
+
+          <h3>Caregiver Support</h3>
+
+          <p>
+            Tools designed specifically to help
+            manage groceries from afar.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= CAREGIVER PROMO ================= -->
+
+    <section class="caregiver-promo">
+
+      <div class="promo-content">
+
+        <div>
+
+          <div class="promo-icon">
+            <i data-lucide="heart-pulse"></i>
+          </div>
+
+          <h2>
+            Need Help Managing Orders?
+          </h2>
+
+          <p>
+            Are you a caregiver? CareCart offers exclusive
+            tools to help you manage dietary preferences,
+            schedule recurring deliveries, and ensure your
+            loved ones never run out of essentials.
+          </p>
+
+        </div>
+
+
+        <button class="promo-button">
+
+          Explore Caregiver Tools
+
+          <i data-lucide="arrow-right"></i>
+
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= DELIVERY SUPPORT ================= -->
+
+    <section class="support-section">
+
+      <div class="support-card delivery">
+
+        <div class="support-icon">
+          <i data-lucide="clock"></i>
+        </div>
+
+        <h3>Reliable Delivery</h3>
+
+        <p>
+          We understand that timing is everything.
+          CareCart guarantees that your essentials
+          arrive exactly when they're needed.
+        </p>
+
+      </div>
+
+
+      <div class="support-card support">
+
+        <div class="support-icon orange-icon">
+          <i data-lucide="shield-alert"></i>
+        </div>
+
+        <h3>Dedicated Support</h3>
+
+        <p>
+          Have an issue with an order?
+          Our priority support team is always
+          ready to assist caregivers.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= FINAL CTA ================= -->
+
+    <section class="final-cta">
+
+      <div class="cta-content">
+
+        <div class="promo-icon">
+          <i data-lucide="sparkles"></i>
+        </div>
+
+        <h2>
+          Ready to Simplify Grocery Shopping?
+        </h2>
+
+        <p>
+          Join families everywhere who rely on CareCart
+          for fresh essentials and a hassle-free,
+          caregiver-friendly ordering experience.
+        </p>
+
+        <button id="scrollTopBtn">
+
+          Start Browsing Groceries
+
+          <i data-lucide="arrow-right"></i>
+
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= MOBILE SIDEBAR ================= -->
+
+  <div
+    class="mobile-sidebar-overlay"
+    id="mobileSidebar"
+  >
+
+    <div class="mobile-sidebar-content">
+
+      <div class="mobile-sidebar-header">
+
+        <h2>Shop Categories</h2>
+
+        <button id="closeMobileSidebar">
+
+          <i data-lucide="x"></i>
+
+        </button>
+
+      </div>
+
+
+      <div id="mobileCategoryList"></div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================= FOOTER ================= -->
+  <div id="footer"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/products.js"></script>
+
+</body>
+</html>

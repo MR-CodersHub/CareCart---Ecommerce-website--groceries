@@ -1,0 +1,1935 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>CareCart — Grocery Care for Families</title>
+
+  <!-- =====================================================
+       GOOGLE FONTS
+  ====================================================== -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet"
+  >
+    <link rel="icon" href="assets/images/carecart_logo.png">
+
+  <!-- =====================================================
+       LUCIDE ICONS
+  ====================================================== -->
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- =====================================================
+       FONT AWESOME
+  ====================================================== -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  >
+
+  <!-- =====================================================
+       SHARED CSS
+       Navbar + Footer come from style.css (via main.js)
+  ====================================================== -->
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- =====================================================
+       HOME2 CSS
+       Distinct layout + content for Home Page 2
+  ====================================================== -->
+
+  <link rel="stylesheet" href="css/home2.css">
+
+</head>
+
+
+<body>
+
+  <!-- =====================================================
+       SHARED NAVBAR (injected by JS)
+  ====================================================== -->
+
+  <div id="navbar"></div>
+
+
+  <!-- =====================================================
+       HOME2 MAIN CONTENT
+  ====================================================== -->
+
+  <main class="hp2-page">
+
+    <!-- ===================================================
+         1. HERO + STATS
+    ==================================================== -->
+
+    <section class="hp2-hero">
+
+      <div class="hp2-container">
+
+        <div class="hp2-hero-grid">
+
+          <!-- LEFT -->
+
+          <div class="hp2-hero-content">
+
+            <div class="hp2-badge">
+
+              <span class="hp2-badge-icon">
+                <i data-lucide="heart"></i>
+              </span>
+
+              Simple care, close to home
+
+            </div>
+
+
+            <h1 class="hp2-hero-title">
+
+              Grocery care that brings
+
+              <span class="hp2-accent-text">
+                families closer.
+              </span>
+
+            </h1>
+
+
+            <p class="hp2-hero-subtitle">
+
+              CareCart helps you order groceries, schedule
+              reliable deliveries, and keep your family
+              updated — even when you are miles apart.
+
+            </p>
+
+
+            <div class="hp2-hero-actions">
+
+              <a
+                href="shop.html"
+                class="hp2-btn hp2-btn-primary"
+              >
+
+                Start an Order
+
+                <i data-lucide="arrow-right"></i>
+
+              </a>
+
+
+              <a
+                href="contact.html"
+                class="hp2-btn hp2-btn-secondary"
+              >
+
+                Talk to Us
+
+              </a>
+
+            </div>
+
+
+            <div class="hp2-hero-trust">
+
+              <div class="hp2-hero-trust-item">
+
+                <i data-lucide="check-circle-2"></i>
+
+                <span>
+                  Senior-friendly
+                </span>
+
+              </div>
+
+
+              <div class="hp2-hero-trust-item">
+
+                <i data-lucide="check-circle-2"></i>
+
+                <span>
+                  Shared family accounts
+                </span>
+
+              </div>
+
+
+              <div class="hp2-hero-trust-item">
+
+                <i data-lucide="check-circle-2"></i>
+
+                <span>
+                  On-time delivery
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- RIGHT -->
+
+          <div class="hp2-hero-media">
+
+            <div class="hp2-hero-media-frame">
+
+              <img
+                src="assets/images/heroo_img.png"
+                alt="Caregiver helping a senior with her weekly groceries"
+                loading="eager"
+              >
+
+              <span class="hp2-hero-media-shade"></span>
+
+            </div>
+
+
+            <!-- Floating rating card -->
+
+            <div class="hp2-float-card hp2-float-rating">
+
+              <div class="hp2-float-stars">
+
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+
+              </div>
+
+              <div>
+
+                <strong>
+                  4.9 / 5
+                </strong>
+
+                <span>
+                  Rated by families
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <!-- Floating delivery chip -->
+
+            <div class="hp2-float-card hp2-float-delivery">
+
+              <div class="hp2-float-pulse"></div>
+
+              <div>
+
+                <strong>
+                  Delivery on the way
+                </strong>
+
+                <span>
+                  2 km away · arriving soon
+                </span>
+
+              </div>
+
+              <i
+                data-lucide="truck"
+                class="hp2-float-delivery-icon"
+              ></i>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- STATS BAR -->
+
+        <div class="hp2-stats-bar">
+
+          <div class="hp2-stat">
+
+            <strong>
+              12,500+
+            </strong>
+
+            <span>
+              Deliveries completed
+            </span>
+
+          </div>
+
+
+          <div class="hp2-stat">
+
+            <strong>
+              2,800+
+            </strong>
+
+            <span>
+              Families supported
+            </span>
+
+          </div>
+
+
+          <div class="hp2-stat">
+
+            <strong>
+              4.9/5
+            </strong>
+
+            <span>
+              Average family rating
+            </span>
+
+          </div>
+
+
+          <div class="hp2-stat">
+
+            <strong>
+              98%
+            </strong>
+
+            <span>
+              On-time deliveries
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         2. WHY FAMILIES CHOOSE CARECART
+    ==================================================== -->
+
+    <section class="hp2-benefits">
+
+      <div class="hp2-container">
+
+        <div class="hp2-section-head">
+
+          <span class="hp2-section-label">
+            Why families stay
+          </span>
+
+          <h2>
+            Everything you need to care, without the guesswork.
+          </h2>
+
+          <p>
+            Grocery care should remove effort from your week,
+            not add to it. Here is how CareCart is designed
+            around real families.
+          </p>
+
+        </div>
+
+
+        <div class="hp2-benefit-grid">
+
+          <!-- CARD 1 -->
+
+          <article class="hp2-benefit-card">
+
+            <div class="hp2-benefit-media">
+
+              <img
+                src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=900&q=80&auto=format&fit=crop"
+                alt="Senior comfortably using a smartphone to order groceries"
+                loading="lazy"
+              >
+
+            </div>
+
+            <h3>
+              Senior-first by design
+            </h3>
+
+            <p>
+              Large text, friendly buttons, and short steps
+              make ordering comfortable for people of every
+              age.
+            </p>
+
+            <ul class="hp2-benefit-list">
+
+              <li>
+                <i data-lucide="check"></i>
+                Big, readable interface
+              </li>
+
+              <li>
+                <i data-lucide="check"></i>
+                Clear next steps
+              </li>
+
+            </ul>
+
+          </article>
+
+
+          <!-- CARD 2 -->
+
+          <article class="hp2-benefit-card">
+
+            <div class="hp2-benefit-media">
+
+              <img
+                src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=900&q=80&auto=format&fit=crop"
+                alt="Family walking together after a simple grocery shop"
+                loading="lazy"
+              >
+
+            </div>
+
+            <h3>
+              Built for busy families
+            </h3>
+
+            <p>
+              Coordinate grocery care from anywhere with a
+              single shared family account.
+            </p>
+
+            <ul class="hp2-benefit-list">
+
+              <li>
+                <i data-lucide="check"></i>
+                One family account
+              </li>
+
+              <li>
+                <i data-lucide="check"></i>
+                Instant order updates
+              </li>
+
+            </ul>
+
+          </article>
+
+
+          <!-- CARD 3 -->
+
+          <article class="hp2-benefit-card">
+
+            <div class="hp2-benefit-media">
+
+              <img
+                src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=900&q=80&auto=format&fit=crop"
+                alt="Healthy weekly essentials in a grocery cart"
+                loading="lazy"
+              >
+
+            </div>
+
+            <h3>
+              Care that never forgets
+            </h3>
+
+            <p>
+              Recurring deliveries remember the weekly
+              essentials, so nothing important is missed.
+            </p>
+
+            <ul class="hp2-benefit-list">
+
+              <li>
+                <i data-lucide="check"></i>
+                Recurring schedules
+              </li>
+
+              <li>
+                <i data-lucide="check"></i>
+                Auto reorder lists
+              </li>
+
+            </ul>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         3. BEFORE & AFTER — THE CARECART DIFFERENCE
+    ==================================================== -->
+
+    <section class="hp2-compare">
+
+      <div class="hp2-container">
+
+        <div class="hp2-section-head">
+
+          <span class="hp2-section-label">
+            The difference
+          </span>
+
+          <h2>
+            See the everyday reality, and the CareCart way.
+          </h2>
+
+        </div>
+
+
+        <div class="hp2-compare-grid">
+
+          <!-- BEFORE -->
+
+          <div class="hp2-compare-column hp2-compare-before">
+
+            <h3>
+              The everyday reality of care
+            </h3>
+
+            <ul>
+
+              <li>
+                <i data-lucide="x"></i>
+                Phone calls and reminders back and forth
+              </li>
+
+              <li>
+                <i data-lucide="x"></i>
+                Forgetting a weekly essential
+              </li>
+
+              <li>
+                <i data-lucide="x"></i>
+                No updates once the order is placed
+              </li>
+
+              <li>
+                <i data-lucide="x"></i>
+                Juggling apps, lists, and contacts
+              </li>
+
+            </ul>
+
+          </div>
+
+
+          <!-- AFTER -->
+
+          <div class="hp2-compare-column hp2-compare-after">
+
+            <span class="hp2-compare-badge">
+              The CareCart way
+            </span>
+
+            <ul>
+
+              <li>
+                <i data-lucide="check"></i>
+                One shared family account
+              </li>
+
+              <li>
+                <i data-lucide="check"></i>
+                Recurring lists that reorder themselves
+              </li>
+
+              <li>
+                <i data-lucide="check"></i>
+                Live updates from shop to doorstep
+              </li>
+
+              <li>
+                <i data-lucide="check"></i>
+                A single, senior-friendly interface
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+
+        <p class="hp2-compare-note">
+
+          Care shouldn't ask your family to work harder than
+          it already does.
+
+          <a href="#hp2-how">
+            See how it works
+            <i data-lucide="arrow-right"></i>
+          </a>
+
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         4. HOW IT WORKS
+    ==================================================== -->
+
+    <section
+      id="hp2-how"
+      class="hp2-steps"
+    >
+
+      <div class="hp2-container">
+
+        <div class="hp2-section-head">
+
+          <span class="hp2-section-label">
+            How it works
+          </span>
+
+          <h2>
+            Four simple steps, from cart to doorstep.
+          </h2>
+
+        </div>
+
+
+        <div class="hp2-steps-grid">
+
+          <!-- STEP 1 -->
+
+          <article class="hp2-step">
+
+            <div class="hp2-step-top">
+
+              <span class="hp2-step-number">
+                01
+              </span>
+
+              <span class="hp2-step-icon">
+                <i data-lucide="shopping-basket"></i>
+              </span>
+
+            </div>
+
+            <h3>
+              Choose
+            </h3>
+
+            <p>
+              Pick groceries or load a saved list your loved
+              one orders regularly.
+            </p>
+
+          </article>
+
+
+          <!-- STEP 2 -->
+
+          <article class="hp2-step">
+
+            <div class="hp2-step-top">
+
+              <span class="hp2-step-number">
+                02
+              </span>
+
+              <span class="hp2-step-icon">
+                <i data-lucide="store"></i>
+              </span>
+
+            </div>
+
+            <h3>
+              We shop fresh
+            </h3>
+
+            <p>
+              Our team selects the items carefully, exactly as
+              they appear on your list.
+            </p>
+
+          </article>
+
+
+          <!-- STEP 3 -->
+
+          <article class="hp2-step">
+
+            <div class="hp2-step-top">
+
+              <span class="hp2-step-number">
+                03
+              </span>
+
+              <span class="hp2-step-icon">
+                <i data-lucide="truck"></i>
+              </span>
+
+            </div>
+
+            <h3>
+              Scheduled delivery
+            </h3>
+
+            <p>
+              Groceries arrive at the door on a day and time
+              that suits your family.
+            </p>
+
+          </article>
+
+
+          <!-- STEP 4 -->
+
+          <article class="hp2-step">
+
+            <div class="hp2-step-top">
+
+              <span class="hp2-step-number">
+                04
+              </span>
+
+              <span class="hp2-step-icon">
+                <i data-lucide="bell-ring"></i>
+              </span>
+
+            </div>
+
+            <h3>
+              Family notified
+            </h3>
+
+            <p>
+              Everyone gets an update the moment the delivery
+              reaches home.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         5. SERVICES
+    ==================================================== -->
+
+    <section class="hp2-services">
+
+      <div class="hp2-container">
+
+        <div class="hp2-section-head">
+
+          <span class="hp2-section-label">
+            What we do
+          </span>
+
+          <h2>
+            Helpful services for every stage of care.
+          </h2>
+
+          <p>
+            From everyday lists to full caregiver control,
+            each service is built to make caring simpler.
+          </p>
+
+        </div>
+
+
+        <div class="hp2-services-grid">
+
+          <!-- SERVICE 1 -->
+
+          <article class="hp2-service-card">
+
+            <div class="hp2-service-media">
+
+              <img
+                src="https://images.unsplash.com/photo-1471193945509-9ad0617afabf?w=900&q=80&auto=format&fit=crop"
+                alt="Fresh groceries ready for a smart shopping list"
+                loading="lazy"
+              >
+
+            </div>
+
+            <h3>
+              Smart Grocery Lists
+            </h3>
+
+            <p>
+              Save favourites and reorder regular essentials
+              in a single tap.
+            </p>
+
+            <a href="shop.html">
+              Browse groceries
+              <i data-lucide="arrow-right"></i>
+            </a>
+
+          </article>
+
+
+          <!-- SERVICE 2 -->
+
+          <article class="hp2-service-card">
+
+            <div class="hp2-service-media">
+
+              <img
+                src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=900&q=80&auto=format&fit=crop"
+                alt="Courier handing over a recurring grocery delivery"
+                loading="lazy"
+              >
+
+            </div>
+
+            <h3>
+              Recurring Deliveries
+            </h3>
+
+            <p>
+              Weekly schedules so essential groceries never
+              get forgotten.
+            </p>
+
+            <a href="pricing.html">
+              See plans
+              <i data-lucide="arrow-right"></i>
+            </a>
+
+          </article>
+
+
+          <!-- SERVICE 3 -->
+
+          <article class="hp2-service-card">
+
+            <div class="hp2-service-media">
+
+              <img
+                src="https://images.unsplash.com/photo-1519074002996-a69e7ac46a42?w=900&q=80&auto=format&fit=crop"
+                alt="Delivery rider heading out with an order"
+                loading="lazy"
+              >
+
+            </div>
+
+            <h3>
+              Live Delivery Tracking
+            </h3>
+
+            <p>
+              Follow every order with clear, simple status
+              updates.
+            </p>
+
+            <a href="faq.html">
+              How tracking works
+              <i data-lucide="arrow-right"></i>
+            </a>
+
+          </article>
+
+
+          <!-- SERVICE 4 -->
+
+          <article class="hp2-service-card">
+
+            <div class="hp2-service-media">
+
+              <img
+                src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68?w=900&q=80&auto=format&fit=crop"
+                alt="Caregiver managing orders from the dashboard on a laptop"
+                loading="lazy"
+              >
+
+            </div>
+
+            <h3>
+              Caregiver Dashboard
+            </h3>
+
+            <p>
+              Manage addresses, preferences, and orders from
+              one calm place.
+            </p>
+
+            <a href="caregiver.html">
+              Open the portal
+              <i data-lucide="arrow-right"></i>
+            </a>
+
+          </article>
+
+
+          <!-- SERVICE 5 -->
+
+          <article class="hp2-service-card">
+
+            <div class="hp2-service-media">
+
+              <img
+                src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=900&q=80&auto=format&fit=crop"
+                alt="Fresh kitchen ingredients chosen for a care plan"
+                loading="lazy"
+              >
+
+            </div>
+
+            <h3>
+              Preferences & Care Plan
+            </h3>
+
+            <p>
+              Record dietary needs and preferences for
+              easier, safer ordering.
+            </p>
+
+            <a href="register.html">
+              Set up a profile
+              <i data-lucide="arrow-right"></i>
+            </a>
+
+          </article>
+
+
+          <!-- SERVICE 6 -->
+
+          <article class="hp2-service-card">
+
+            <div class="hp2-service-media">
+
+              <img
+                src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=900&q=80&auto=format&fit=crop"
+                alt="Family member receiving an order update on her phone"
+                loading="lazy"
+              >
+
+            </div>
+
+            <h3>
+              Family Notifications
+            </h3>
+
+            <p>
+              Automatic updates keep the whole family in the
+              loop, every time.
+            </p>
+
+            <a href="contact.html">
+              Contact us
+              <i data-lucide="arrow-right"></i>
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         6. COVERAGE STRIP
+    ==================================================== -->
+
+    <section class="hp2-coverage">
+
+      <div class="hp2-container">
+
+        <div class="hp2-coverage-box">
+
+          <div class="hp2-coverage-icon">
+            <i data-lucide="map-pin"></i>
+          </div>
+
+          <div class="hp2-coverage-text">
+
+            <h3>
+              Delivering care in your area
+            </h3>
+
+            <p>
+              Check whether we deliver to your loved one's
+              address before you place an order.
+            </p>
+
+          </div>
+
+
+          <a
+            href="contact.html"
+            class="hp2-btn hp2-btn-light"
+          >
+            Check delivery area
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         7. CAREGIVER DASHBOARD
+    ==================================================== -->
+
+    <section class="hp2-dashboard">
+
+      <div class="hp2-container">
+
+        <div class="hp2-dashboard-grid">
+
+          <!-- LEFT -->
+
+          <div class="hp2-dashboard-content">
+
+            <span class="hp2-section-label">
+              Built for caregivers
+            </span>
+
+            <h2>
+              Your care, in
+
+              <span class="hp2-accent-text">
+                one calm place.
+              </span>
+
+            </h2>
+
+            <p>
+              Caregivers get a simple dashboard to manage the
+              whole care routine — groceries, schedules,
+              preferences, and the people they look after.
+            </p>
+
+            <ul class="hp2-dashboard-features">
+
+              <li>
+                <i data-lucide="check-circle-2"></i>
+                Manage senior delivery addresses
+              </li>
+
+              <li>
+                <i data-lucide="check-circle-2"></i>
+                Save dietary preferences
+              </li>
+
+              <li>
+                <i data-lucide="check-circle-2"></i>
+                Create frequently ordered lists
+              </li>
+
+              <li>
+                <i data-lucide="check-circle-2"></i>
+                Schedule recurring deliveries
+              </li>
+
+            </ul>
+
+
+            <a
+              href="caregiver.html"
+              class="hp2-btn hp2-btn-primary"
+            >
+
+              Open Caregiver Dashboard
+
+              <i data-lucide="arrow-right"></i>
+
+            </a>
+
+          </div>
+
+
+          <!-- RIGHT — DASHBOARD PREVIEW -->
+
+          <div class="hp2-dashboard-preview">
+
+            <div class="hp2-dashboard-header">
+
+              <div>
+
+                <p>
+                  Caregiver Dashboard
+                </p>
+
+                <h3>
+                  Good morning
+                </h3>
+
+              </div>
+
+
+              <div class="hp2-dashboard-avatar">
+                <i data-lucide="users"></i>
+              </div>
+
+            </div>
+
+
+            <div class="hp2-dashboard-tiles">
+
+              <div class="hp2-dashboard-tile">
+
+                <span class="hp2-dashboard-tile-icon">
+                  <i data-lucide="shopping-cart"></i>
+                </span>
+
+                <span class="hp2-dashboard-tile-label">
+                  Next Delivery
+                </span>
+
+                <strong>
+                  Tomorrow
+                </strong>
+
+              </div>
+
+
+              <div class="hp2-dashboard-tile">
+
+                <span class="hp2-dashboard-tile-icon">
+                  <i data-lucide="calendar-days"></i>
+                </span>
+
+                <span class="hp2-dashboard-tile-label">
+                  Schedule
+                </span>
+
+                <strong>
+                  Weekly
+                </strong>
+
+              </div>
+
+
+              <div class="hp2-dashboard-tile">
+
+                <span class="hp2-dashboard-tile-icon">
+                  <i data-lucide="heart"></i>
+                </span>
+
+                <span class="hp2-dashboard-tile-label">
+                  Care Plan
+                </span>
+
+                <strong>
+                  Healthy
+                </strong>
+
+              </div>
+
+
+              <div class="hp2-dashboard-tile">
+
+                <span class="hp2-dashboard-tile-icon">
+                  <i data-lucide="map-pin"></i>
+                </span>
+
+                <span class="hp2-dashboard-tile-label">
+                  Address
+                </span>
+
+                <strong>
+                  Saved
+                </strong>
+
+              </div>
+
+            </div>
+
+
+            <div class="hp2-dashboard-status">
+
+              <div class="hp2-dashboard-status-head">
+
+                <div>
+
+                  <span>
+                    Delivery status
+                  </span>
+
+                  <strong>
+                    Preparing your order
+                  </strong>
+
+                </div>
+
+
+                <span class="hp2-dashboard-badge">
+                  Active
+                </span>
+
+              </div>
+
+
+              <div class="hp2-dashboard-progress">
+
+                <div></div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         8. FAQ
+    ==================================================== -->
+
+    <section class="hp2-faq">
+
+      <div class="hp2-container">
+
+        <div class="hp2-section-head">
+
+          <span class="hp2-section-label">
+            Questions, answered
+          </span>
+
+          <h2>
+            Everything families ask us most.
+          </h2>
+
+        </div>
+
+
+        <div class="hp2-faq-list">
+
+          <!-- QUESTION 1 -->
+
+          <div class="hp2-faq-item">
+
+            <button
+              type="button"
+              class="hp2-faq-question"
+              aria-expanded="false"
+            >
+
+              <span>
+                How do recurring deliveries work?
+              </span>
+
+              <i data-lucide="chevron-down"></i>
+
+            </button>
+
+
+            <div class="hp2-faq-answer">
+
+              <p>
+                Once a week (or as often as you choose), we
+                deliver the groceries from your saved list to
+                your loved one's door. You can pause, skip, or
+                edit any delivery before the next window.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- QUESTION 2 -->
+
+          <div class="hp2-faq-item">
+
+            <button
+              type="button"
+              class="hp2-faq-question"
+              aria-expanded="false"
+            >
+
+              <span>
+                Can I order for a senior who lives in another city?
+              </span>
+
+              <i data-lucide="chevron-down"></i>
+
+            </button>
+
+
+            <div class="hp2-faq-answer">
+
+              <p>
+                Yes. Create a shared family account, save the
+                delivery address and preferences of your loved
+                one, then place and manage orders from
+                wherever you are.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- QUESTION 3 -->
+
+          <div class="hp2-faq-item">
+
+            <button
+              type="button"
+              class="hp2-faq-question"
+              aria-expanded="false"
+            >
+
+              <span>
+                What if my loved one has dietary restrictions?
+              </span>
+
+              <i data-lucide="chevron-down"></i>
+
+            </button>
+
+
+            <div class="hp2-faq-answer">
+
+              <p>
+                Save dietary preferences in the profile and
+                we'll filter suggestions to suitable,
+                diet-friendly items — no complicated lists or
+                guesswork.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- QUESTION 4 -->
+
+          <div class="hp2-faq-item">
+
+            <button
+              type="button"
+              class="hp2-faq-question"
+              aria-expanded="false"
+            >
+
+              <span>
+                How do I track an active delivery?
+              </span>
+
+              <i data-lucide="chevron-down"></i>
+
+            </button>
+
+
+            <div class="hp2-faq-answer">
+
+              <p>
+                Every order has a simple status update — from
+                confirmed to packed to out for delivery.
+                Caregivers get notified the moment groceries
+                reach home.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- QUESTION 5 -->
+
+          <div class="hp2-faq-item">
+
+            <button
+              type="button"
+              class="hp2-faq-question"
+              aria-expanded="false"
+            >
+
+              <span>
+                Is the interface senior-friendly?
+              </span>
+
+              <i data-lucide="chevron-down"></i>
+
+            </button>
+
+
+            <div class="hp2-faq-answer">
+
+              <p>
+                Yes. Large text, clear buttons, and short
+                steps are designed with older adults in mind,
+                so seniors can also browse and order
+                comfortably on their own.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <p class="hp2-faq-more">
+
+          Still have a question?
+
+          <a href="faq.html">
+            Visit the FAQ page
+            <i data-lucide="arrow-right"></i>
+          </a>
+
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         9. CARE TIPS — BLOG PREVIEW
+    ==================================================== -->
+
+    <section class="hp2-blog">
+
+      <div class="hp2-container">
+
+        <div class="hp2-blog-head">
+
+          <div>
+
+            <span class="hp2-section-label">
+              Family care tips
+            </span>
+
+            <h2>
+              Simple guides for everyday care.
+            </h2>
+
+          </div>
+
+
+          <a
+            href="blog.html"
+            class="hp2-text-link"
+          >
+            Visit the blog
+            <i data-lucide="arrow-right"></i>
+          </a>
+
+        </div>
+
+
+        <div class="hp2-blog-grid">
+
+          <!-- POST 1 -->
+
+          <article class="hp2-blog-card">
+
+            <a
+              href="blog-details.html?id=caregiver-grocery-tips"
+              class="hp2-blog-image"
+            >
+
+              <img
+                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80&auto=format&fit=crop"
+                alt="Caregiver writing a grocery list"
+                loading="lazy"
+              >
+
+              <span class="hp2-blog-tag">
+                Caregivers
+              </span>
+
+            </a>
+
+
+            <div class="hp2-blog-body">
+
+              <div class="hp2-blog-meta">
+
+                <span>
+                  <i data-lucide="calendar-days"></i>
+                  Aug 15, 2026
+                </span>
+
+                <span>
+                  <i data-lucide="clock-3"></i>
+                  4 min read
+                </span>
+
+              </div>
+
+
+              <h3>
+                7 Grocery Tips Every Caregiver Should Know
+              </h3>
+
+              <p>
+                Practical ways to organize grocery shopping
+                and support the people you care for.
+              </p>
+
+
+              <a
+                href="blog-details.html?id=caregiver-grocery-tips"
+                class="hp2-blog-read"
+              >
+                Read article
+                <i data-lucide="arrow-right"></i>
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- POST 2 -->
+
+          <article class="hp2-blog-card">
+
+            <a
+              href="blog-details.html?id=weekly-grocery-planning"
+              class="hp2-blog-image"
+            >
+
+              <img
+                src="https://images.unsplash.com/photo-1506484381205-f7945653044d?w=800&q=80&auto=format&fit=crop"
+                alt="Planning a weekly grocery list"
+                loading="lazy"
+              >
+
+              <span class="hp2-blog-tag">
+                Planning
+              </span>
+
+            </a>
+
+
+            <div class="hp2-blog-body">
+
+              <div class="hp2-blog-meta">
+
+                <span>
+                  <i data-lucide="calendar-days"></i>
+                  Aug 12, 2026
+                </span>
+
+                <span>
+                  <i data-lucide="clock-3"></i>
+                  5 min read
+                </span>
+
+              </div>
+
+
+              <h3>
+                Why Weekly Grocery Planning Saves Time
+              </h3>
+
+              <p>
+                Reduce stress and stop forgotten essentials
+                with a simple weekly routine.
+              </p>
+
+
+              <a
+                href="blog-details.html?id=weekly-grocery-planning"
+                class="hp2-blog-read"
+              >
+                Read article
+                <i data-lucide="arrow-right"></i>
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- POST 3 -->
+
+          <article class="hp2-blog-card">
+
+            <a
+              href="blog-details.html?id=grocery-delivery-seniors"
+              class="hp2-blog-image"
+            >
+
+              <img
+                src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80&auto=format&fit=crop"
+                alt="Doorstep grocery delivery for seniors"
+                loading="lazy"
+              >
+
+              <span class="hp2-blog-tag">
+                Delivery
+              </span>
+
+            </a>
+
+
+            <div class="hp2-blog-body">
+
+              <div class="hp2-blog-meta">
+
+                <span>
+                  <i data-lucide="calendar-days"></i>
+                  Aug 10, 2026
+                </span>
+
+                <span>
+                  <i data-lucide="clock-3"></i>
+                  4 min read
+                </span>
+
+              </div>
+
+
+              <h3>
+                The Benefits of Grocery Delivery for Seniors
+              </h3>
+
+              <p>
+                How home delivery makes grocery access more
+                convenient for older adults.
+              </p>
+
+
+              <a
+                href="blog-details.html?id=grocery-delivery-seniors"
+                class="hp2-blog-read"
+              >
+                Read article
+                <i data-lucide="arrow-right"></i>
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         10. TESTIMONIALS
+    ==================================================== -->
+
+    <section class="hp2-testimonials">
+
+      <div class="hp2-container">
+
+        <div class="hp2-section-head">
+
+          <span class="hp2-section-label">
+            From families like yours
+          </span>
+
+          <h2>
+            Care that earns its place in your routine.
+          </h2>
+
+        </div>
+
+
+        <div class="hp2-testimonial-grid">
+
+          <!-- FEATURED -->
+
+          <article class="hp2-testimonial hp2-testimonial-featured">
+
+            <div class="hp2-quote-icon">
+              <i data-lucide="quote"></i>
+            </div>
+
+
+            <div class="hp2-stars">
+
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+
+            </div>
+
+
+            <p class="hp2-testimonial-text">
+
+              "CareCart changed how our family supports my
+              parents. I manage everything from another city —
+              the weekly list, the delivery day, the updates.
+              It feels like my 'presence' at their doorstep
+              every single week."
+
+            </p>
+
+
+            <div class="hp2-testimonial-user">
+
+              <div class="hp2-avatar">
+                AS
+              </div>
+
+              <div>
+
+                <strong>
+                  Ananya S.
+                </strong>
+
+                <span>
+                  Daughter & Caregiver
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- SIDE CARDS -->
+
+          <div class="hp2-testimonial-column">
+
+            <article class="hp2-testimonial">
+
+              <div class="hp2-stars">
+
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+
+              </div>
+
+
+              <p class="hp2-testimonial-text">
+
+                "My mother orders on her own now. The buttons
+                are big, the steps are clear, and the delivery
+                arrives on the day she expects it."
+
+              </p>
+
+
+              <div class="hp2-testimonial-user">
+
+                <div class="hp2-avatar">
+                  KM
+                </div>
+
+                <div>
+
+                  <strong>
+                    Kavita M.
+                  </strong>
+
+                  <span>
+                    Senior Customer
+                  </span>
+
+                </div>
+
+              </div>
+
+            </article>
+
+
+            <article class="hp2-testimonial">
+
+              <div class="hp2-stars">
+
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+
+              </div>
+
+
+              <p class="hp2-testimonial-text">
+
+                "The recurring delivery means I never have to
+                worry about Dad running out of essentials. That
+                is one less phone call every week."
+
+              </p>
+
+
+              <div class="hp2-testimonial-user">
+
+                <div class="hp2-avatar">
+                  ST
+                </div>
+
+                <div>
+
+                  <strong>
+                    Sanjay T.
+                  </strong>
+
+                  <span>
+                    Son & Caregiver
+                  </span>
+
+                </div>
+
+              </div>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         11. FINAL CTA
+    ==================================================== -->
+
+    <section class="hp2-cta">
+
+      <div class="hp2-container">
+
+        <div class="hp2-cta-box">
+
+          <div class="hp2-cta-icon">
+            <i data-lucide="users"></i>
+          </div>
+
+
+          <h2>
+            Care shouldn't depend on distance.
+          </h2>
+
+
+          <p>
+            Start making everyday care simpler for the people
+            you love — today.
+          </p>
+
+
+          <div class="hp2-cta-actions">
+
+            <a
+              href="register.html"
+              class="hp2-btn hp2-btn-primary"
+            >
+
+              Get Started
+
+              <i data-lucide="arrow-right"></i>
+
+            </a>
+
+
+            <a
+              href="contact.html"
+              class="hp2-btn hp2-btn-ghost"
+            >
+
+              <i data-lucide="phone"></i>
+
+              Contact Us
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       SHARED FOOTER (injected by JS)
+  ====================================================== -->
+
+  <div id="footer"></div>
+
+
+  <!-- =====================================================
+       SHARED JAVASCRIPT
+       Same navbar/footer functions used by Home1.
+  ====================================================== -->
+
+  <script src="js/main.js"></script>
+
+
+  <!-- =====================================================
+       LUCIDE + HOME2 INTERACTIONS
+       (FAQ accordion)
+  ====================================================== -->
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+      /* Lucide icons */
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+
+      /* FAQ accordion */
+      var questions = document.querySelectorAll(".hp2-faq-question");
+
+      questions.forEach(function (question) {
+        question.addEventListener("click", function () {
+          var item = question.closest(".hp2-faq-item");
+          var isOpen = item.classList.contains("active");
+
+          /* Close other items */
+          questions.forEach(function (q) {
+            q.closest(".hp2-faq-item").classList.remove("active");
+            q.setAttribute("aria-expanded", "false");
+          });
+
+          if (!isOpen) {
+            item.classList.add("active");
+            question.setAttribute("aria-expanded", "true");
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>

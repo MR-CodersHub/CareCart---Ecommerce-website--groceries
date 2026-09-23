@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareCart - Blog Details</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/blog-details.css" />
+    <link rel="icon" href="assets/images/carecart_logo.png">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  >
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <div id="navbar"></div>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="blog-details-page">
+
+    <!-- ================= BACK / SHARE ================= -->
+    <div class="top-nav-bar">
+      <div class="blog-container top-nav-flex">
+        <a href="blog.html" class="back-link">
+          <i data-lucide="arrow-left"></i>
+          Back to Blog
+        </a>
+
+        <button class="share-btn" onclick="navigator.clipboard && navigator.clipboard.writeText(window.location.href); alert('Article link copied to clipboard!');">
+          <i data-lucide="share-2"></i>
+          Share Article
+        </button>
+      </div>
+    </div>
+
+    <!-- ================= HERO ================= -->
+    <section class="details-hero-section">
+      <div class="blog-container">
+        <div class="details-hero-card">
+          <div class="hero-grid">
+            
+            <!-- COVER IMAGE -->
+            <div class="details-cover-wrapper">
+              <img id="detailImage" src="" alt="Blog cover image" />
+              <div class="details-cover-overlay"></div>
+              <div class="details-category-badge" id="detailCategoryBadge">Senior Care</div>
+            </div>
+
+            <!-- ARTICLE INFO -->
+            <div class="details-info-box">
+              <div class="details-info-orb orb-a"></div>
+              <div class="details-info-orb orb-b"></div>
+
+              <div class="details-info-inner">
+                <div class="details-badges">
+                  <span class="badge-cat" id="detailCategoryTag">Senior Care</span>
+                  <span class="badge-feat">Featured Article</span>
+                </div>
+
+                <h1 class="details-title" id="detailTitle">
+                  A Simple Guide to Grocery Shopping for Seniors
+                </h1>
+
+                <p class="details-intro" id="detailIntro">
+                  Grocery shopping should be simple, comfortable and accessible. With a few thoughtful habits, seniors can make their everyday grocery routine much easier.
+                </p>
+
+                <div class="details-meta">
+                  <div class="meta-item">
+                    <i data-lucide="calendar-days"></i>
+                    <span id="detailDate">Aug 20, 2026</span>
+                  </div>
+                  <div class="meta-item">
+                    <i data-lucide="clock-3"></i>
+                    <span id="detailReadTime">5 min read</span>
+                  </div>
+                </div>
+
+                <div class="author-box">
+                  <div class="author-avatar">
+                    <i data-lucide="user-round"></i>
+                  </div>
+                  <div>
+                    <p class="author-name">CareCart Editorial Team</p>
+                    <p class="author-role">Grocery care & senior wellness</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ARTICLE CONTENT ================= -->
+    <section class="content-section">
+      <div class="blog-container content-layout">
+        
+        <!-- MAIN ARTICLE -->
+        <article class="main-article-card">
+          <!-- INTRO -->
+          <div class="article-lead">
+            <div class="lead-icon">
+              <i data-lucide="book-open"></i>
+            </div>
+            <p id="articleLeadText">
+              Grocery shopping should be simple, comfortable and accessible. With a few thoughtful habits, seniors can make their everyday grocery routine much easier.
+            </p>
+          </div>
+
+          <hr class="article-divider" />
+
+          <!-- QUICK GUIDE -->
+          <div class="quick-guide-box">
+            <div class="quick-guide-header">
+              <div class="quick-guide-icon">
+                <i data-lucide="lightbulb"></i>
+              </div>
+              <div>
+                <p class="quick-guide-label">Quick guide</p>
+                <h3>Key takeaways</h3>
+              </div>
+            </div>
+
+            <div class="takeaways-grid" id="takeawaysGrid">
+              <!-- Injected by JS -->
+            </div>
+          </div>
+
+          <!-- ARTICLE SECTIONS -->
+          <div class="article-sections-container" id="articleSectionsList">
+            <!-- Injected by JS -->
+          </div>
+
+          <!-- CHECKLIST -->
+          <div class="checklist-box">
+            <div class="checklist-header">
+              <i data-lucide="check-circle-2"></i>
+              <h3>Simple CareCart Checklist</h3>
+            </div>
+
+            <div class="checklist-grid">
+              <div class="check-item">
+                <i data-lucide="check-circle-2"></i>
+                <span>Prepare your grocery list</span>
+              </div>
+              <div class="check-item">
+                <i data-lucide="check-circle-2"></i>
+                <span>Review dietary preferences</span>
+              </div>
+              <div class="check-item">
+                <i data-lucide="check-circle-2"></i>
+                <span>Check frequently ordered items</span>
+              </div>
+              <div class="check-item">
+                <i data-lucide="check-circle-2"></i>
+                <span>Choose a delivery schedule</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- FEEDBACK -->
+          <div class="feedback-box">
+            <div>
+              <p class="feedback-title">Was this article helpful?</p>
+              <p class="feedback-sub">We would love to hear your feedback.</p>
+            </div>
+            <button class="feedback-btn" onclick="alert('Thank you for your feedback!')">
+              <i data-lucide="message-circle"></i>
+              Give Feedback
+            </button>
+          </div>
+        </article>
+
+        <!-- SIDEBAR -->
+        <aside class="details-sidebar">
+          <!-- ARTICLE TOOLS -->
+          <div class="sidebar-card">
+            <p class="sidebar-label">Article tools</p>
+            <div class="tools-buttons">
+              <button class="tool-btn" onclick="alert('Article saved to your bookmarks!')">
+                <i data-lucide="bookmark"></i>
+                Save article
+              </button>
+              <button class="tool-btn" onclick="navigator.clipboard && navigator.clipboard.writeText(window.location.href); alert('Article link copied to clipboard!');">
+                <i data-lucide="share-2"></i>
+                Share article
+              </button>
+            </div>
+          </div>
+
+          <!-- MORE FROM CARECART -->
+          <div class="sidebar-card">
+            <i data-lucide="book-open" class="sidebar-icon-brand"></i>
+            <h3>More from CareCart</h3>
+            <p>Explore helpful grocery, wellness and caregiver articles.</p>
+            <a href="blog.html" class="sidebar-view-all">
+              View all articles
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- SERVICE CTA -->
+          <div class="service-cta-card">
+            <div class="service-cta-icon">
+              <i data-lucide="heart-handshake"></i>
+            </div>
+            <h3>Need grocery support?</h3>
+            <p>
+              Explore CareCart services designed to make grocery management easier for seniors and caregivers.
+            </p>
+            <a href="shop.html" class="btn-service-cta">
+              Explore Services
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- ================= RELATED ARTICLES ================= -->
+    <section class="related-section">
+      <div class="blog-container">
+        <div class="section-heading">
+          <span class="sub-label">Keep reading</span>
+          <h2 class="section-title">You may also like</h2>
+        </div>
+
+        <div class="related-grid" id="relatedArticlesGrid">
+          <!-- Injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FINAL CTA ================= -->
+    <section class="final-banner-section">
+      <div class="blog-container">
+        <div class="final-banner-card">
+          <div class="final-banner-flex">
+            <div>
+              <span class="banner-badge">CARECART</span>
+              <h2>Make everyday grocery care simpler.</h2>
+              <p>
+                Explore our grocery services and discover an easier way to manage shopping, deliveries and caregiver support.
+              </p>
+            </div>
+
+            <a href="shop.html" class="btn-banner-shop">
+              Start Shopping
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <div id="footer"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/blog-details.js"></script>
+</body>
+</html>
